@@ -1,0 +1,592 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e6]:
+          - button "Hyper Connect Connect. Collaborate. Create. New possibilities@Scale" [ref=e8] [cursor=pointer]:
+            - generic [ref=e9]: Hyper Connect
+            - generic [ref=e10]: Connect. Collaborate. Create. New possibilities@Scale
+          - generic [ref=e11]:
+            - button "Home" [ref=e12] [cursor=pointer]:
+              - img [ref=e13]
+              - generic [ref=e15]: Home
+            - button "Favourites" [ref=e16] [cursor=pointer]:
+              - img [ref=e17]
+              - generic [ref=e19]: Favourites
+            - button "Inbox" [ref=e20] [cursor=pointer]:
+              - img [ref=e21]
+              - generic [ref=e23]: Inbox
+            - button "Network" [ref=e24] [cursor=pointer]:
+              - img [ref=e25]
+              - generic [ref=e27]: Network
+            - button "Toggle Theme" [ref=e28] [cursor=pointer]:
+              - img [ref=e29]
+              - generic [ref=e31]: Theme
+            - generic [ref=e33] [cursor=pointer]:
+              - generic [ref=e34]: Admin
+              - img [ref=e35]
+            - button "Admin User" [ref=e38] [cursor=pointer]:
+              - img "Admin User" [ref=e39]
+      - main [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - button "Discover Opportunities Explore new markets, investments, and connections" [ref=e43] [cursor=pointer]:
+              - generic [ref=e44]:
+                - img [ref=e46]
+                - generic [ref=e48]:
+                  - heading "Discover Opportunities" [level=2] [ref=e49]
+                  - paragraph [ref=e50]: Explore new markets, investments, and connections
+              - img [ref=e51]
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - heading "Explore New Markets" [level=3] [ref=e56]
+                - paragraph [ref=e57]: Connect with businesses from around the globe.
+              - generic [ref=e58]:
+                - heading "Find Investment Opportunities" [level=3] [ref=e59]
+                - paragraph [ref=e60]: Discover promising startups and established companies.
+              - generic [ref=e61]:
+                - heading "Streamline Procurement" [level=3] [ref=e62]
+                - paragraph [ref=e63]: Source products and services efficiently from trusted suppliers.
+              - generic [ref=e64]:
+                - heading "Grow Your Network" [level=3] [ref=e65]
+                - paragraph [ref=e66]: Build valuable connections with industry leaders.
+              - generic [ref=e67]:
+                - heading "Unlock Business Potential" [level=3] [ref=e68]
+                - paragraph [ref=e69]: Leverage data-driven insights for strategic decisions.
+              - generic [ref=e70]:
+                - heading "Explore New Markets" [level=3] [ref=e71]
+                - paragraph [ref=e72]: Connect with businesses from around the globe.
+              - generic [ref=e73]:
+                - heading "Find Investment Opportunities" [level=3] [ref=e74]
+                - paragraph [ref=e75]: Discover promising startups and established companies.
+              - generic [ref=e76]:
+                - heading "Streamline Procurement" [level=3] [ref=e77]
+                - paragraph [ref=e78]: Source products and services efficiently from trusted suppliers.
+              - generic [ref=e79]:
+                - heading "Grow Your Network" [level=3] [ref=e80]
+                - paragraph [ref=e81]: Build valuable connections with industry leaders.
+              - generic [ref=e82]:
+                - heading "Unlock Business Potential" [level=3] [ref=e83]
+                - paragraph [ref=e84]: Leverage data-driven insights for strategic decisions.
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - heading "What's trending" [level=2] [ref=e87]
+              - generic [ref=e88]:
+                - img "Predictive Market Analysis" [ref=e89]
+                - generic [ref=e92]:
+                  - paragraph [ref=e93]: DataWeave Analytics
+                  - heading "Predictive Market Analysis" [level=3] [ref=e94]
+                  - paragraph [ref=e95]: SaaS Platform
+                  - generic [ref=e96]:
+                    - paragraph [ref=e97]: Trending Post
+                    - paragraph [ref=e98]: "Case Study: Global Investment Bank"
+                - generic [ref=e99]:
+                  - button "Previous trend" [ref=e100] [cursor=pointer]:
+                    - img [ref=e101]
+                  - generic [ref=e103]:
+                    - button "View trending item from DataWeave Analytics" [ref=e104] [cursor=pointer]:
+                      - generic [ref=e105]:
+                        - img "DataWeave Analytics" [ref=e107]
+                        - generic [ref=e109]: "0"
+                      - generic [ref=e110]: DataWeave Analytics
+                    - button "View trending item from Innovate Solutions" [ref=e111] [cursor=pointer]:
+                      - generic [ref=e112]:
+                        - img "Innovate Solutions" [ref=e114]
+                        - generic [ref=e116]: "0"
+                      - generic [ref=e117]: Innovate Solutions
+                    - button "View trending item from NextGen Robotics" [ref=e118] [cursor=pointer]:
+                      - generic [ref=e119]:
+                        - img "NextGen Robotics" [ref=e121]
+                        - generic [ref=e123]: "0"
+                      - generic [ref=e124]: NextGen Robotics
+                    - button "View trending item from GreenPack" [ref=e125] [cursor=pointer]:
+                      - generic [ref=e126]:
+                        - img "GreenPack" [ref=e128]
+                        - generic [ref=e130]: "0"
+                      - generic [ref=e131]: GreenPack
+                  - button "Next trend" [ref=e132] [cursor=pointer]:
+                    - img [ref=e133]
+            - generic [ref=e135]:
+              - generic [ref=e136]:
+                - heading "Upcoming Events" [level=2] [ref=e137]
+                - generic [ref=e138]:
+                  - button "Previous events" [ref=e139] [cursor=pointer]:
+                    - img [ref=e140]
+                  - button "Next events" [ref=e142] [cursor=pointer]:
+                    - img [ref=e143]
+              - generic [ref=e145]:
+                - generic [ref=e147]:
+                  - heading "Test Event 2024" [level=3] [ref=e150]
+                  - generic [ref=e151]:
+                    - generic [ref=e152]:
+                      - img [ref=e153]
+                      - generic [ref=e155]:
+                        - paragraph [ref=e156]: Jan 12, 2024
+                        - paragraph [ref=e157]: Virtual
+                    - generic [ref=e158]:
+                      - img [ref=e159]
+                      - paragraph [ref=e162]: Global
+                  - generic [ref=e163]:
+                    - generic [ref=e164]:
+                      - generic [ref=e165]: "Speaking Opp:"
+                      - generic [ref=e166]: None
+                    - generic [ref=e167]:
+                      - generic [ref=e168]: "Delegate Reg:"
+                      - generic [ref=e169]: N/A
+                - generic [ref=e171]:
+                  - heading "LogiTech Conference 2024" [level=3] [ref=e174]
+                  - generic [ref=e175]:
+                    - generic [ref=e176]:
+                      - img [ref=e177]
+                      - generic [ref=e179]:
+                        - paragraph [ref=e180]: Sep 15, 2024
+                        - paragraph [ref=e181]: 10:00 AM
+                    - generic [ref=e182]:
+                      - img [ref=e183]
+                      - paragraph [ref=e186]: Virtual
+                    - generic [ref=e187]:
+                      - img [ref=e188]
+                      - paragraph [ref=e190]: North America, Europe
+                    - generic [ref=e191]:
+                      - img [ref=e192]
+                      - paragraph [ref=e194]: Technology, Logistics
+                  - generic [ref=e195]:
+                    - generic [ref=e196]:
+                      - generic [ref=e197]: "Speaking Opp:"
+                      - generic [ref=e198]: 2 Open
+                    - generic [ref=e199]:
+                      - generic [ref=e200]: "Delegate Reg:"
+                      - generic [ref=e201]: Free (50 Slots)
+                  - button "Contact Manager" [ref=e203] [cursor=pointer]:
+                    - text: Contact Manager
+                    - img [ref=e204]
+                - generic [ref=e207]:
+                  - heading "Alpha Event" [level=3] [ref=e210]
+                  - generic [ref=e211]:
+                    - generic [ref=e212]:
+                      - img [ref=e213]
+                      - generic [ref=e215]:
+                        - paragraph [ref=e216]: Jan 1, 2026
+                        - paragraph [ref=e217]: Paris
+                    - generic [ref=e218]:
+                      - img [ref=e219]
+                      - paragraph [ref=e222]: Europe
+                  - generic [ref=e223]:
+                    - generic [ref=e224]:
+                      - generic [ref=e225]: "Speaking Opp:"
+                      - generic [ref=e226]: None
+                    - generic [ref=e227]:
+                      - generic [ref=e228]: "Delegate Reg:"
+                      - generic [ref=e229]: N/A
+                - generic [ref=e231]:
+                  - heading "Test Event 2026" [level=3] [ref=e234]
+                  - generic [ref=e235]:
+                    - generic [ref=e236]:
+                      - img [ref=e237]
+                      - generic [ref=e239]:
+                        - paragraph [ref=e240]: Jan 12, 2026
+                        - paragraph [ref=e241]: London
+                    - generic [ref=e242]:
+                      - img [ref=e243]
+                      - paragraph [ref=e246]: Europe
+                  - generic [ref=e247]:
+                    - generic [ref=e248]:
+                      - generic [ref=e249]: "Speaking Opp:"
+                      - generic [ref=e250]: None
+                    - generic [ref=e251]:
+                      - generic [ref=e252]: "Delegate Reg:"
+                      - generic [ref=e253]: N/A
+            - generic [ref=e254]:
+              - heading "Businesses to Watch" [level=2] [ref=e255]
+              - generic [ref=e257]:
+                - generic [ref=e259]:
+                  - generic [ref=e260] [cursor=pointer]:
+                    - generic [ref=e261]:
+                      - img "DataWeave Analytics logo" [ref=e262]
+                      - generic [ref=e263]:
+                        - paragraph [ref=e264]: DataWeave Analytics
+                        - paragraph [ref=e265]: Finance, Technology
+                    - paragraph [ref=e266]: "Prediction Accuracy: +7%"
+                    - generic [ref=e267]:
+                      - generic [ref=e268]:
+                        - paragraph [ref=e269]: "25"
+                        - paragraph [ref=e270]: Clients
+                      - generic [ref=e271]:
+                        - paragraph [ref=e272]: 25,000
+                        - paragraph [ref=e273]: Followers
+                      - generic [ref=e274]:
+                        - paragraph [ref=e275]: "4.9"
+                        - paragraph [ref=e276]: Score
+                  - generic [ref=e277]:
+                    - button "Unlike" [ref=e278] [cursor=pointer]:
+                      - img [ref=e279]
+                      - generic [ref=e281]: Like
+                    - button "Connect with Seller" [ref=e282] [cursor=pointer]:
+                      - img [ref=e283]
+                      - generic [ref=e285]: Connect
+                    - button "Message Seller" [ref=e286] [cursor=pointer]:
+                      - img [ref=e287]
+                      - generic [ref=e289]: Message
+                    - button "Request Meeting" [ref=e290] [cursor=pointer]:
+                      - img [ref=e291]
+                      - generic [ref=e293]: Meet
+                    - button "Follow Seller" [ref=e294] [cursor=pointer]:
+                      - img [ref=e295]
+                      - generic [ref=e297]: Follow
+                - generic [ref=e299]:
+                  - generic [ref=e300] [cursor=pointer]:
+                    - generic [ref=e301]:
+                      - img "Innovate Solutions logo" [ref=e302]
+                      - generic [ref=e303]:
+                        - paragraph [ref=e304]: Innovate Solutions
+                        - paragraph [ref=e305]: Technology, Logistics
+                    - paragraph [ref=e306]: "Efficiency: +30%"
+                    - generic [ref=e307]:
+                      - generic [ref=e308]:
+                        - paragraph [ref=e309]: "50"
+                        - paragraph [ref=e310]: Clients
+                      - generic [ref=e311]:
+                        - paragraph [ref=e312]: 12,500
+                        - paragraph [ref=e313]: Followers
+                      - generic [ref=e314]:
+                        - paragraph [ref=e315]: "4.8"
+                        - paragraph [ref=e316]: Score
+                  - generic [ref=e317]:
+                    - button "Like" [ref=e318] [cursor=pointer]:
+                      - img [ref=e319]
+                      - generic [ref=e321]: Like
+                    - button "Connect with Seller" [ref=e322] [cursor=pointer]:
+                      - img [ref=e323]
+                      - generic [ref=e325]: Connect
+                    - button "Message Seller" [ref=e326] [cursor=pointer]:
+                      - img [ref=e327]
+                      - generic [ref=e329]: Message
+                    - button "Request Meeting" [ref=e330] [cursor=pointer]:
+                      - img [ref=e331]
+                      - generic [ref=e333]: Meet
+                    - button "Follow Seller" [ref=e334] [cursor=pointer]:
+                      - img [ref=e335]
+                      - generic [ref=e337]: Follow
+                - generic [ref=e339]:
+                  - generic [ref=e340] [cursor=pointer]:
+                    - generic [ref=e341]:
+                      - img "NextGen Robotics logo" [ref=e342]
+                      - generic [ref=e343]:
+                        - paragraph [ref=e344]: NextGen Robotics
+                        - paragraph [ref=e345]: Automotive, Industrial
+                    - paragraph [ref=e346]: "Productivity: +25%"
+                    - generic [ref=e347]:
+                      - generic [ref=e348]:
+                        - paragraph [ref=e349]: "40"
+                        - paragraph [ref=e350]: Clients
+                      - generic [ref=e351]:
+                        - paragraph [ref=e352]: 18,000
+                        - paragraph [ref=e353]: Followers
+                      - generic [ref=e354]:
+                        - paragraph [ref=e355]: "4.7"
+                        - paragraph [ref=e356]: Score
+                  - generic [ref=e357]:
+                    - button "Like" [ref=e358] [cursor=pointer]:
+                      - img [ref=e359]
+                      - generic [ref=e361]: Like
+                    - button "Connect with Seller" [ref=e362] [cursor=pointer]:
+                      - img [ref=e363]
+                      - generic [ref=e365]: Connect
+                    - button "Message Seller" [ref=e366] [cursor=pointer]:
+                      - img [ref=e367]
+                      - generic [ref=e369]: Message
+                    - button "Request Meeting" [ref=e370] [cursor=pointer]:
+                      - img [ref=e371]
+                      - generic [ref=e373]: Meet
+                    - button "Follow Seller" [ref=e374] [cursor=pointer]:
+                      - img [ref=e375]
+                      - generic [ref=e377]: Follow
+                - generic [ref=e379]:
+                  - generic [ref=e380] [cursor=pointer]:
+                    - generic [ref=e381]:
+                      - img "GreenPack logo" [ref=e382]
+                      - generic [ref=e383]:
+                        - paragraph [ref=e384]: GreenPack
+                        - paragraph [ref=e385]: Consumer Goods, Manufacturing
+                    - paragraph [ref=e386]: "Sustainability: -40% Carbon"
+                    - generic [ref=e387]:
+                      - generic [ref=e388]:
+                        - paragraph [ref=e389]: "120"
+                        - paragraph [ref=e390]: Clients
+                      - generic [ref=e391]:
+                        - paragraph [ref=e392]: 5,300
+                        - paragraph [ref=e393]: Followers
+                      - generic [ref=e394]:
+                        - paragraph [ref=e395]: "4.5"
+                        - paragraph [ref=e396]: Score
+                  - generic [ref=e397]:
+                    - button "Like" [ref=e398] [cursor=pointer]:
+                      - img [ref=e399]
+                      - generic [ref=e401]: Like
+                    - button "Connect with Seller" [ref=e402] [cursor=pointer]:
+                      - img [ref=e403]
+                      - generic [ref=e405]: Connect
+                    - button "Message Seller" [ref=e406] [cursor=pointer]:
+                      - img [ref=e407]
+                      - generic [ref=e409]: Message
+                    - button "Request Meeting" [ref=e410] [cursor=pointer]:
+                      - img [ref=e411]
+                      - generic [ref=e413]: Meet
+                    - button "Follow Seller" [ref=e414] [cursor=pointer]:
+                      - img [ref=e415]
+                      - generic [ref=e417]: Follow
+              - generic [ref=e418]:
+                - button "Scroll left" [ref=e419] [cursor=pointer]:
+                  - img [ref=e420]
+                - button "Scroll right" [ref=e422] [cursor=pointer]:
+                  - img [ref=e423]
+            - generic [ref=e425]:
+              - heading "Latest Updates" [level=2] [ref=e426]
+              - generic [ref=e427]:
+                - generic [ref=e429]:
+                  - generic [ref=e430]:
+                    - generic [ref=e431]:
+                      - img "Innovate Solutions" [ref=e432] [cursor=pointer]
+                      - generic [ref=e433]:
+                        - paragraph [ref=e434] [cursor=pointer]: Innovate Solutions
+                        - paragraph [ref=e435]: 2026-02-26T15:09:26.480Z
+                    - button "Connect" [ref=e436] [cursor=pointer]:
+                      - img [ref=e437]
+                      - generic [ref=e439]: Connect
+                  - generic [ref=e440]:
+                    - heading "Early Detection Saves Lives" [level=2] [ref=e441]
+                    - generic [ref=e442]: Our AI diagnostic tool is now being trialed in 5 hospitals.
+                  - img "Early Detection Saves Lives" [ref=e444]
+                  - generic [ref=e445]:
+                    - button "0 Like" [ref=e446] [cursor=pointer]:
+                      - generic [ref=e447]:
+                        - img [ref=e448]
+                        - generic [ref=e450]: "0"
+                      - generic [ref=e451]: Like
+                    - button "0 Comment" [ref=e452] [cursor=pointer]:
+                      - generic [ref=e453]:
+                        - img [ref=e454]
+                        - generic [ref=e456]: "0"
+                      - generic [ref=e457]: Comment
+                    - button "0 Bookmark" [ref=e458] [cursor=pointer]:
+                      - generic [ref=e459]:
+                        - img [ref=e460]
+                        - generic [ref=e462]: "0"
+                      - generic [ref=e463]: Bookmark
+                - generic [ref=e465]:
+                  - generic [ref=e466]:
+                    - generic [ref=e467]:
+                      - img "DataWeave Analytics" [ref=e468] [cursor=pointer]
+                      - generic [ref=e469]:
+                        - paragraph [ref=e470] [cursor=pointer]: DataWeave Analytics
+                        - paragraph [ref=e471]: 2026-02-26T15:09:26.480Z
+                    - button "Connect" [ref=e472] [cursor=pointer]:
+                      - img [ref=e473]
+                      - generic [ref=e475]: Connect
+                  - generic [ref=e476]:
+                    - 'heading "Case Study: Global Investment Bank" [level=2] [ref=e477]'
+                    - generic [ref=e478]: Discover how we helped a major bank improve their FOREX trading accuracy.
+                  - generic [ref=e479]:
+                    - button "1 Like" [ref=e480] [cursor=pointer]:
+                      - generic [ref=e481]:
+                        - img [ref=e482]
+                        - generic [ref=e484]: "1"
+                      - generic [ref=e485]: Like
+                    - button "1 Comment" [ref=e486] [cursor=pointer]:
+                      - generic [ref=e487]:
+                        - img [ref=e488]
+                        - generic [ref=e490]: "1"
+                      - generic [ref=e491]: Comment
+                    - button "0 Bookmark" [ref=e492] [cursor=pointer]:
+                      - generic [ref=e493]:
+                        - img [ref=e494]
+                        - generic [ref=e496]: "0"
+                      - generic [ref=e497]: Bookmark
+                - generic [ref=e499]:
+                  - generic [ref=e500]:
+                    - generic [ref=e501]:
+                      - img "NextGen Robotics" [ref=e502] [cursor=pointer]
+                      - generic [ref=e503]:
+                        - paragraph [ref=e504] [cursor=pointer]: NextGen Robotics
+                        - paragraph [ref=e505]: 2026-02-26T15:09:26.480Z
+                    - button "Connect" [ref=e506] [cursor=pointer]:
+                      - img [ref=e507]
+                      - generic [ref=e509]: Connect
+                  - generic [ref=e510]:
+                    - 'heading "Robots in Action: See the RoboArm-3000" [level=2] [ref=e511]'
+                    - generic [ref=e512]: Check out our latest video showcasing the speed and precision of our robots.
+                  - iframe [ref=e515]:
+                    - generic "YouTube Video Player" [ref=f1e3]:
+                      - generic [ref=f1e5]:
+                        - link "Photo image of Boston Dynamics" [ref=f1e8] [cursor=pointer]:
+                          - /url: https://www.youtube.com/channel/UC7vVhkEfw4nOGp8TyDk7RcQ?embeds_referring_euri=http%3A%2F%2Flocalhost%3A3000%2F
+                        - link "Atlas | Partners in Parkour" [ref=f1e11] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=tF4DML7FIWk
+                        - button "Share" [ref=f1e13] [cursor=pointer]:
+                          - generic [ref=f1e14]:
+                            - img
+                          - generic [ref=f1e15]: Share
+                      - button "Play" [ref=f1e18] [cursor=pointer]:
+                        - img
+                      - link "Watch on YouTube" [ref=f1e19] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=tF4DML7FIWk&embeds_referring_euri=http%3A%2F%2Flocalhost%3A3000%2F
+                        - generic [ref=f1e20]: Watch on
+                        - generic [ref=f1e21]:
+                          - img
+                  - generic [ref=e516]:
+                    - button "1 Like" [ref=e517] [cursor=pointer]:
+                      - generic [ref=e518]:
+                        - img [ref=e519]
+                        - generic [ref=e521]: "1"
+                      - generic [ref=e522]: Like
+                    - button "0 Comment" [ref=e523] [cursor=pointer]:
+                      - generic [ref=e524]:
+                        - img [ref=e525]
+                        - generic [ref=e527]: "0"
+                      - generic [ref=e528]: Comment
+                    - button "0 Bookmark" [ref=e529] [cursor=pointer]:
+                      - generic [ref=e530]:
+                        - img [ref=e531]
+                        - generic [ref=e533]: "0"
+                      - generic [ref=e534]: Bookmark
+                - generic [ref=e536]:
+                  - generic [ref=e537]:
+                    - generic [ref=e538]:
+                      - img "GreenPack" [ref=e539] [cursor=pointer]
+                      - generic [ref=e540]:
+                        - paragraph [ref=e541] [cursor=pointer]: GreenPack
+                        - paragraph [ref=e542]: 2026-02-26T15:09:26.480Z
+                    - button "Connect" [ref=e543] [cursor=pointer]:
+                      - img [ref=e544]
+                      - generic [ref=e546]: Connect
+                  - generic [ref=e547]:
+                    - heading "New Biodegradable Material" [level=2] [ref=e548]
+                    - generic [ref=e549]: Our new plant-based material is now available for all packaging needs.
+                  - iframe [ref=e552]:
+                    - generic "YouTube Video Player" [ref=f2e3]:
+                      - alert [ref=f2e4]:
+                        - generic [ref=f2e5]:
+                          - generic [ref=f2e6]:
+                            - img
+                          - generic [ref=f2e7]:
+                            - generic [ref=f2e8]: Video unavailable
+                            - generic [ref=f2e9]: This video is unavailable
+                        - link "Visit YouTube to search for more videos" [ref=f2e10] [cursor=pointer]:
+                          - /url: https://www.youtube.com
+                          - img
+                      - link "Watch on YouTube" [ref=f2e11] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=Ixv_2hrO1rU&embeds_referring_euri=http%3A%2F%2Flocalhost%3A3000%2F
+                        - generic [ref=f2e12]: Watch on
+                        - generic [ref=f2e13]:
+                          - img
+                  - generic [ref=e553]:
+                    - button "0 Like" [ref=e554] [cursor=pointer]:
+                      - generic [ref=e555]:
+                        - img [ref=e556]
+                        - generic [ref=e558]: "0"
+                      - generic [ref=e559]: Like
+                    - button "0 Comment" [ref=e560] [cursor=pointer]:
+                      - generic [ref=e561]:
+                        - img [ref=e562]
+                        - generic [ref=e564]: "0"
+                      - generic [ref=e565]: Comment
+                    - button "0 Bookmark" [ref=e566] [cursor=pointer]:
+                      - generic [ref=e567]:
+                        - img [ref=e568]
+                        - generic [ref=e570]: "0"
+                      - generic [ref=e571]: Bookmark
+                - generic [ref=e573]:
+                  - generic [ref=e574]:
+                    - generic [ref=e575]:
+                      - img "Innovate Solutions" [ref=e576] [cursor=pointer]
+                      - generic [ref=e577]:
+                        - paragraph [ref=e578] [cursor=pointer]: Innovate Solutions
+                        - paragraph [ref=e579]: 2026-02-26T15:09:26.479Z
+                    - button "Connect" [ref=e580] [cursor=pointer]:
+                      - img [ref=e581]
+                      - generic [ref=e583]: Connect
+                  - generic [ref=e584]:
+                    - heading "We Upgraded Our Logistics AI!" [level=2] [ref=e585]
+                    - generic [ref=e586]: Just pushed a major update to our AI engine, improving prediction accuracy by 15%.
+                  - img "We Upgraded Our Logistics AI!" [ref=e588]
+                  - generic [ref=e589]:
+                    - button "2 Like" [ref=e590] [cursor=pointer]:
+                      - generic [ref=e591]:
+                        - img [ref=e592]
+                        - generic [ref=e594]: "2"
+                      - generic [ref=e595]: Like
+                    - button "1 Comment" [ref=e596] [cursor=pointer]:
+                      - generic [ref=e597]:
+                        - img [ref=e598]
+                        - generic [ref=e600]: "1"
+                      - generic [ref=e601]: Comment
+                    - button "0 Bookmark" [ref=e602] [cursor=pointer]:
+                      - generic [ref=e603]:
+                        - img [ref=e604]
+                        - generic [ref=e606]: "0"
+                      - generic [ref=e607]: Bookmark
+      - generic [ref=e609]:
+        - button "Filter by My View" [ref=e610] [cursor=pointer]:
+          - img [ref=e611]
+          - generic [ref=e613]: My Fav
+        - button "Filter by Value Chain" [ref=e614] [cursor=pointer]:
+          - img [ref=e615]
+          - generic [ref=e617]: ValueChain
+        - button "Filter by Geography" [ref=e618] [cursor=pointer]:
+          - img [ref=e619]
+          - generic [ref=e621]: Geo
+        - button "Filter by Industry" [ref=e622] [cursor=pointer]:
+          - img [ref=e623]
+          - generic [ref=e625]: Industry
+        - button "Filter by Offering" [ref=e626] [cursor=pointer]:
+          - img [ref=e627]
+          - generic [ref=e629]: Offering
+    - generic [ref=e630]:
+      - generic:
+        - generic:
+          - heading "Impersonate User" [level=3]:
+            - img
+            - text: Impersonate User
+          - paragraph: Select a user to view the app as them.
+        - generic:
+          - button "Frank Finance Frank Finance Browser - Independent":
+            - img "Frank Finance"
+            - generic:
+              - paragraph: Frank Finance
+              - paragraph: Browser - Independent
+          - button "Alice Buyer Alice Buyer Buyer - Global Retail":
+            - img "Alice Buyer"
+            - generic:
+              - paragraph: Alice Buyer
+              - paragraph: Buyer - Global Retail
+          - button "Bob Seller Bob Seller Seller - Innovate Solutions":
+            - img "Bob Seller"
+            - generic:
+              - paragraph: Bob Seller
+              - paragraph: Seller - Innovate Solutions
+          - button "Charlie Investor Charlie Investor Investor - Venture Capital Inc.":
+            - img "Charlie Investor"
+            - generic:
+              - paragraph: Charlie Investor
+              - paragraph: Investor - Venture Capital Inc.
+          - button "Eve Engineer Eve Engineer Collaborator - Innovate Solutions":
+            - img "Eve Engineer"
+            - generic:
+              - paragraph: Eve Engineer
+              - paragraph: Collaborator - Innovate Solutions
+          - button "Admin User Admin User Admin - HyperConnect":
+            - img "Admin User"
+            - generic:
+              - paragraph: Admin User
+              - paragraph: Admin - HyperConnect
+        - generic:
+          - button "Platform Settings":
+            - img
+            - generic: Platform Settings
+      - button "Open Admin Controls" [ref=e631] [cursor=pointer]:
+        - img [ref=e632]
+  - img
+```

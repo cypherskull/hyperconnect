@@ -1,0 +1,3202 @@
+{
+  "config": {
+    "configFile": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/playwright.config.ts",
+    "rootDir": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "specs/01-auth.spec.ts",
+      "file": "specs/01-auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication",
+          "file": "specs/01-auth.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "01 – login page renders on first visit",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4089,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:53.735Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5defd53ae0955ad440a4-ff5ccec6aa5bcdc11e26",
+              "file": "specs/01-auth.spec.ts",
+              "line": 11,
+              "column": 9
+            },
+            {
+              "title": "02 – login fails with wrong password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16387,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:01.120Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5defd53ae0955ad440a4-80855f43654638788ab5",
+              "file": "specs/01-auth.spec.ts",
+              "line": 19,
+              "column": 9
+            },
+            {
+              "title": "03 – admin can log in and see the feed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9954,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:17.736Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5defd53ae0955ad440a4-efd590130edec251f128",
+              "file": "specs/01-auth.spec.ts",
+              "line": 32,
+              "column": 9
+            },
+            {
+              "title": "04 – sign-up tab is accessible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7922,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:28.112Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5defd53ae0955ad440a4-61788bc25101a003d3b5",
+              "file": "specs/01-auth.spec.ts",
+              "line": 39,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/02-feed.spec.ts",
+      "file": "specs/02-feed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Feed",
+          "file": "specs/02-feed.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "05 – feed loads with \"What's trending\" section",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 19409,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:53.774Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fb94c2f004ea93e05a3-cae6ea47fbf9de57fa43",
+              "file": "specs/02-feed.spec.ts",
+              "line": 15,
+              "column": 9
+            },
+            {
+              "title": "06 – \"Businesses to Watch\" section shows seller cards",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 6384,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:16.495Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fb94c2f004ea93e05a3-0ca5cd210f55167cbc72",
+              "file": "specs/02-feed.spec.ts",
+              "line": 21,
+              "column": 9
+            },
+            {
+              "title": "07 – \"Latest Updates\" section shows posts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 12157,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:23.504Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fb94c2f004ea93e05a3-215b035c2ba2155c1445",
+              "file": "specs/02-feed.spec.ts",
+              "line": 29,
+              "column": 9
+            },
+            {
+              "title": "08 – trending slider navigates with arrows",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 17562,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:36.151Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fb94c2f004ea93e05a3-59d8372e000b52fe4348",
+              "file": "specs/02-feed.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "09 – InfoCarousel is present and has content",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 10587,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:53.791Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fb94c2f004ea93e05a3-821ac335ebda02132341",
+              "file": "specs/02-feed.spec.ts",
+              "line": 55,
+              "column": 9
+            },
+            {
+              "title": "10 – bottom navigation bar is visible on feed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3375,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:04.628Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fb94c2f004ea93e05a3-43149e331d8b85b31e99",
+              "file": "specs/02-feed.spec.ts",
+              "line": 60,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/03-post-interactions.spec.ts",
+      "file": "specs/03-post-interactions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Post Interactions",
+          "file": "specs/03-post-interactions.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "11 – can like a post (UI toggle)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 21445,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:53.771Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "782acb20536d424ed729-e2c1d34ca1470a564379",
+              "file": "specs/03-post-interactions.spec.ts",
+              "line": 27,
+              "column": 9
+            },
+            {
+              "title": "12 – can bookmark a post (UI toggle)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts",
+                        "line": 48,
+                        "column": 53
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 10444,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:18.569Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts",
+                            "line": 48,
+                            "column": 53
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "782acb20536d424ed729-b49ba74487a661b4abcb",
+              "file": "specs/03-post-interactions.spec.ts",
+              "line": 44,
+              "column": 9
+            },
+            {
+              "title": "13 – comment modal opens and accepts text",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts",
+                        "line": 59,
+                        "column": 52
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 6333,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:29.545Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts",
+                            "line": 59,
+                            "column": 52
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "782acb20536d424ed729-09b37b47f6cd220b3962",
+              "file": "specs/03-post-interactions.spec.ts",
+              "line": 55,
+              "column": 9
+            },
+            {
+              "title": "14 – API: like endpoint persists to DB",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 15111,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:36.272Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "782acb20536d424ed729-cacd4f9273269ac60702",
+              "file": "specs/03-post-interactions.spec.ts",
+              "line": 79,
+              "column": 9
+            },
+            {
+              "title": "15 – API: bookmark endpoint persists to DB",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 12404,
+                      "error": {
+                        "message": "Error: apiRequestContext.get: socket hang up\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/posts\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLTEiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3NzIxNzkwNzUsImV4cCI6MTc3Mjc4Mzg3NX0.Qn0hP2OONHH6PMCQAlJpVvYpzRYMtBjKxLs48LGcqDM\u001b[22m\n",
+                        "stack": "Error: apiRequestContext.get: socket hang up\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/posts\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLTEiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3NzIxNzkwNzUsImV4cCI6MTc3Mjc4Mzg3NX0.Qn0hP2OONHH6PMCQAlJpVvYpzRYMtBjKxLs48LGcqDM\u001b[22m\n\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:109:40",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts",
+                          "column": 40,
+                          "line": 109
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 107 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39madminToken) { test\u001b[33m.\u001b[39mskip()\u001b[33m;\u001b[39m \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m }\n \u001b[90m 108 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 109 |\u001b[39m         \u001b[36mconst\u001b[39m postsRes \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m`${API_URL}/posts`\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m     |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 110 |\u001b[39m             headers\u001b[33m:\u001b[39m { \u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m \u001b[32m`Bearer ${adminToken}`\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 111 |\u001b[39m         })\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m         \u001b[36mconst\u001b[39m postsData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m postsRes\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts",
+                            "column": 40,
+                            "line": 109
+                          },
+                          "message": "Error: apiRequestContext.get: socket hang up\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/posts\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLTEiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3NzIxNzkwNzUsImV4cCI6MTc3Mjc4Mzg3NX0.Qn0hP2OONHH6PMCQAlJpVvYpzRYMtBjKxLs48LGcqDM\u001b[22m\n\n\n\u001b[0m \u001b[90m 107 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39madminToken) { test\u001b[33m.\u001b[39mskip()\u001b[33m;\u001b[39m \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m }\n \u001b[90m 108 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 109 |\u001b[39m         \u001b[36mconst\u001b[39m postsRes \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m`${API_URL}/posts`\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m     |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 110 |\u001b[39m             headers\u001b[33m:\u001b[39m { \u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m \u001b[32m`Bearer ${adminToken}`\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 111 |\u001b[39m         })\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m         \u001b[36mconst\u001b[39m postsData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m postsRes\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:109:40\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:51.706Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts",
+                        "column": 40,
+                        "line": 109
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 3083,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T07:59:11.397Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium-retry1/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "782acb20536d424ed729-f0b7eaf3bf7839436a7c",
+              "file": "specs/03-post-interactions.spec.ts",
+              "line": 106,
+              "column": 9
+            },
+            {
+              "title": "16 – API: comment is saved and returned",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1284,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:16.577Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "782acb20536d424ed729-139751c08976a1913094",
+              "file": "specs/03-post-interactions.spec.ts",
+              "line": 127,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/04-seller-profile.spec.ts",
+      "file": "specs/04-seller-profile.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Seller Profile Page",
+          "file": "specs/04-seller-profile.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "17 – seller profile page renders correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 21551,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:53.779Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-fd06960780f6afc44974",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 32,
+              "column": 9
+            },
+            {
+              "title": "18 – About tab is default and shows description",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 16884,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:18.827Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-42e7f5ed9568c2ce7770",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 46,
+              "column": 9
+            },
+            {
+              "title": "19 – Posts tab shows the seller's posts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 16293,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:36.007Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-970cce0f1aacfc6f7b54",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 52,
+              "column": 9
+            },
+            {
+              "title": "20 – user can click Follow on seller profile",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 30827,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                            "column": 47,
+                            "line": 69
+                          },
+                          "message": "Error: locator.innerText: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#btn-follow')\u001b[22m\n\n\n\u001b[0m \u001b[90m 67 |\u001b[39m             \u001b[36mawait\u001b[39m followBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m             \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1000\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 69 |\u001b[39m             \u001b[36mconst\u001b[39m afterText \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m followBtn\u001b[33m.\u001b[39minnerText()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect(afterText)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBe(initialText)\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m             \u001b[90m// Toggle back\u001b[39m\n \u001b[90m 72 |\u001b[39m             \u001b[36mawait\u001b[39m followBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:69:47\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:52.386Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium/error-context.md"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 12174,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Businesses to Watch') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Businesses to Watch') to be visible\u001b[22m\n\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:25:20",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                          "column": 20,
+                          "line": 25
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m auth\u001b[33m.\u001b[39mlogin(\u001b[32m'admin'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[90m// Click into a seller via the Businesses to Watch section\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'text=Businesses to Watch'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Click on 'Innovate Solutions' card body\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mconst\u001b[39m sellerText \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`text=\"Innovate Solutions\"`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m sellerText\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                            "column": 20,
+                            "line": 25
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Businesses to Watch') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m auth\u001b[33m.\u001b[39mlogin(\u001b[32m'admin'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[90m// Click into a seller via the Businesses to Watch section\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'text=Businesses to Watch'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Click on 'Innovate Solutions' card body\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mconst\u001b[39m sellerText \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`text=\"Innovate Solutions\"`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m sellerText\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:25:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T07:59:25.734Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                        "column": 20,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-818df5a18184d4d8d0d0",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 61,
+              "column": 9
+            },
+            {
+              "title": "21 – Connect button sends connection request",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 9690,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 55,
+                          "line": 30
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 55,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:40.941Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 55,
+                        "line": 30
+                      }
+                    },
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 9773,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 55,
+                          "line": 30
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 55,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T07:59:52.940Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 55,
+                        "line": 30
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-2241d24dcad263a522db",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 76,
+              "column": 9
+            },
+            {
+              "title": "22 – Message modal opens and can be submitted",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                        "line": 89,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T08:00:04.396Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                            "line": 89,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-615f0b7cfea1834a5b0a",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 89,
+              "column": 10
+            },
+            {
+              "title": "23 – Meeting request modal opens",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                        "line": 114,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T08:00:04.396Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                            "line": 114,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-ceb81929bf3443d8aeb8",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 114,
+              "column": 10
+            },
+            {
+              "title": "24 – Write a Testimonial button opens modal",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9408,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 55,
+                          "line": 30
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 55,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T08:00:04.396Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 55,
+                        "line": 30
+                      }
+                    },
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 16384,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 25,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 25,
+                            "line": 27
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T08:00:15.294Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 25,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-78a486aa9cc43cd63693",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 132,
+              "column": 9
+            },
+            {
+              "title": "25 – API: follow/unfollow seller persists to DB",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 16286,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 25,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 25,
+                            "line": 27
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T08:00:33.418Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 25,
+                        "line": 27
+                      }
+                    },
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9910,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 55,
+                          "line": 30
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 55,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T08:00:51.353Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 55,
+                        "line": 30
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-de3aaae1e9369c37af1a",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 151,
+              "column": 9
+            },
+            {
+              "title": "26 – API: message a seller persists to DB",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9501,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 55,
+                          "line": 30
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 55,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T08:01:02.986Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 55,
+                        "line": 30
+                      }
+                    },
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 16404,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 25,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 25,
+                            "line": 27
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T08:01:13.978Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 25,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-d5776ddb237d6dd3109d",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 177,
+              "column": 9
+            },
+            {
+              "title": "27 – API: meeting request persists to DB",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11456,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Businesses to Watch') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Businesses to Watch') to be visible\u001b[22m\n\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:25:20",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                          "column": 20,
+                          "line": 25
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m auth\u001b[33m.\u001b[39mlogin(\u001b[32m'admin'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[90m// Click into a seller via the Businesses to Watch section\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'text=Businesses to Watch'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Click on 'Innovate Solutions' card body\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mconst\u001b[39m sellerText \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`text=\"Innovate Solutions\"`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m sellerText\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                            "column": 20,
+                            "line": 25
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Businesses to Watch') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m auth\u001b[33m.\u001b[39mlogin(\u001b[32m'admin'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[90m// Click into a seller via the Businesses to Watch section\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'text=Businesses to Watch'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Click on 'Innovate Solutions' card body\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mconst\u001b[39m sellerText \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m`text=\"Innovate Solutions\"`\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m sellerText\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:25:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T08:01:32.016Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts",
+                        "column": 20,
+                        "line": 25
+                      }
+                    },
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9859,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('header') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('header') to be visible\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 25,
+                          "line": 29
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:29\n\n\u001b[0m \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 25,
+                            "line": 29
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('header') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:29\n\n\u001b[0m \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T08:01:44.906Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 25,
+                        "line": 29
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-6f156a6dec5dc68c2382",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 197,
+              "column": 9
+            },
+            {
+              "title": "28 – Back button returns to feed",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 16704,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 25,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 25,
+                            "line": 27
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T08:01:56.396Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 25,
+                        "line": 27
+                      }
+                    },
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9715,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 55,
+                          "line": 30
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 55,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T08:02:15.137Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 55,
+                        "line": 30
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b54f32e2791f30fe059c-7dd5d49a93da8c8093c5",
+              "file": "specs/04-seller-profile.spec.ts",
+              "line": 217,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/05-connection-requests.spec.ts",
+      "file": "specs/05-connection-requests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Connection Requests",
+          "file": "specs/05-connection-requests.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "29 – API: connection request is saved to DB",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 228,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:53.741Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "28ba295a963afcffbf96-712a44b862d1617f2881",
+              "file": "specs/05-connection-requests.spec.ts",
+              "line": 19,
+              "column": 9
+            },
+            {
+              "title": "30 – API: inbox returns the connection request after sending",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 38,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:55.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "28ba295a963afcffbf96-48f2d95be841a2c92f93",
+              "file": "specs/05-connection-requests.spec.ts",
+              "line": 55,
+              "column": 9
+            },
+            {
+              "title": "31 – API: duplicate connection request returns 409",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 36,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:55.593Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "28ba295a963afcffbf96-280dc862ec3a70710526",
+              "file": "specs/05-connection-requests.spec.ts",
+              "line": 69,
+              "column": 9
+            },
+            {
+              "title": "32 – API: inbox item can be archived",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 59,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:55.647Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "28ba295a963afcffbf96-aac8f8f60a59f7835a33",
+              "file": "specs/05-connection-requests.spec.ts",
+              "line": 90,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/06-inbox.spec.ts",
+      "file": "specs/06-inbox.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inbox",
+          "file": "specs/06-inbox.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "33 – inbox page is accessible from nav bar",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 14939,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:57:55.768Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8c752aac957b0847703-a960052552dab68fb8f0",
+              "file": "specs/06-inbox.spec.ts",
+              "line": 16,
+              "column": 9
+            },
+            {
+              "title": "34 – inbox lists connection requests",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 8340,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:11.893Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8c752aac957b0847703-fd10795db504eb64e2c4",
+              "file": "specs/06-inbox.spec.ts",
+              "line": 22,
+              "column": 9
+            },
+            {
+              "title": "35 – inbox shows message category items",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 14629,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:21.228Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8c752aac957b0847703-84309d82ef21f6cc0c80",
+              "file": "specs/06-inbox.spec.ts",
+              "line": 39,
+              "column": 9
+            },
+            {
+              "title": "36 – API: inbox returns items for authenticated user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 13938,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:36.042Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8c752aac957b0847703-d3e151d07df8c2615e2e",
+              "file": "specs/06-inbox.spec.ts",
+              "line": 54,
+              "column": 9
+            },
+            {
+              "title": "37 – API: inbox requires authentication",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 13094,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:50.370Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8c752aac957b0847703-b3c75565de1eb99ea702",
+              "file": "specs/06-inbox.spec.ts",
+              "line": 68,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/07-network.spec.ts",
+      "file": "specs/07-network.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Network Page",
+          "file": "specs/07-network.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "38 – network page renders without crash",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11213,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:36.220Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d02c76bff49c2b0c0884-84faf0eabacd2e1b9297",
+              "file": "specs/07-network.spec.ts",
+              "line": 18,
+              "column": 9
+            },
+            {
+              "title": "39 – network page shows seller or user cards",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4221,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:48.737Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d02c76bff49c2b0c0884-6b189e0a96bc372fc560",
+              "file": "specs/07-network.spec.ts",
+              "line": 27,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/07-seller-manage-tabs.spec.ts",
+      "file": "specs/07-seller-manage-tabs.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Seller Owner Profile View",
+          "file": "specs/07-seller-manage-tabs.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "01 – All seller profile tabs load successfully without crashing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14146,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:58:53.789Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e7b8d692ef8db9f7edb8-42c0dc0d9bbbb5d2a78b",
+              "file": "specs/07-seller-manage-tabs.spec.ts",
+              "line": 25,
+              "column": 9
+            },
+            {
+              "title": "02 – Manage tab link interactions do not crash",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13618,
+                      "error": {
+                        "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Manage Content/i }) to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Manage Content/i }) to be visible\u001b[22m\n\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-seller-manage-tabs.spec.ts:18:32",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-seller-manage-tabs.spec.ts",
+                          "column": 32,
+                          "line": 18
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m         \u001b[90m// From User Profile, navigate to Seller Profile Manage tab\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mconst\u001b[39m manageContentBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Manage Content/i\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m manageContentBtn\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m manageContentBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Wait for profile to load\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-seller-manage-tabs.spec.ts",
+                            "column": 32,
+                            "line": 18
+                          },
+                          "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Manage Content/i }) to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m         \u001b[90m// From User Profile, navigate to Seller Profile Manage tab\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mconst\u001b[39m manageContentBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Manage Content/i\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m manageContentBtn\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m manageContentBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Wait for profile to load\u001b[39m\u001b[0m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-seller-manage-tabs.spec.ts:18:32\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:08.072Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-07-seller-manage-tab-5ece1-k-interactions-do-not-crash-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-07-seller-manage-tab-5ece1-k-interactions-do-not-crash-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-07-seller-manage-tab-5ece1-k-interactions-do-not-crash-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-seller-manage-tabs.spec.ts",
+                        "column": 32,
+                        "line": 18
+                      }
+                    },
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 31340,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-seller-manage-tabs.spec.ts",
+                            "column": 60,
+                            "line": 73
+                          },
+                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Cancel' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 71 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Add New Solution'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 72 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h2:has-text(\"Add New Solution\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m8000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 73 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Cancel'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 74 |\u001b[39m\n \u001b[90m 75 |\u001b[39m         \u001b[90m// Test inner tabs\u001b[39m\n \u001b[90m 76 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Collateral'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-seller-manage-tabs.spec.ts:73:60\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T07:59:23.179Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-07-seller-manage-tab-5ece1-k-interactions-do-not-crash-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-07-seller-manage-tab-5ece1-k-interactions-do-not-crash-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-07-seller-manage-tab-5ece1-k-interactions-do-not-crash-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-07-seller-manage-tab-5ece1-k-interactions-do-not-crash-chromium-retry1/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e7b8d692ef8db9f7edb8-8f91076500524b2005ce",
+              "file": "specs/07-seller-manage-tabs.spec.ts",
+              "line": 61,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/08-manage-tab-debug.spec.ts",
+      "file": "specs/08-manage-tab-debug.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Manage tab debug for Bob Seller",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 5895,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-02-27T07:59:04.382Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e7dcf4a68e4917fd9db1-8da557b344e9110f1776",
+          "file": "specs/08-manage-tab-debug.spec.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "specs/08-user-profile.spec.ts",
+      "file": "specs/08-user-profile.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Profile Management",
+          "file": "specs/08-user-profile.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "40 – profile page opens from user avatar/menu",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "warning",
+                      "description": "Profile nav link not found in header dropdown"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3523,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:08.084Z",
+                      "annotations": [
+                        {
+                          "type": "warning",
+                          "description": "Profile nav link not found in header dropdown"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee93496a929e5f1f4691-b3ebea0367bef789c073",
+              "file": "specs/08-user-profile.spec.ts",
+              "line": 16,
+              "column": 9
+            },
+            {
+              "title": "41 – API: GET /users/me returns current user",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 9889,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 55,
+                          "line": 30
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 55,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2').first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m logout() {\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:30:55)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.651Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 55,
+                        "line": 30
+                      }
+                    },
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 17499,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\n    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9",
+                        "location": {
+                          "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                          "column": 25,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                            "column": 25,
+                            "line": 27
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h2') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfixtures/pageObjects.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// Wait for feed to appear (means login worked)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h2'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mlong })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[90m// Wait for Header to be ready (at least one nav item)\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'header'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[33mTIMEOUTS\u001b[39m\u001b[33m.\u001b[39mmedium })\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'h2'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at AuthPage.login (/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:27:25)\u001b[22m\n\u001b[2m    at /Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-27T07:59:23.199Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/cypher/Documents/Documents - Sunit’s Mac mini/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts",
+                        "column": 25,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ee93496a929e5f1f4691-fb1fe41c86dc8d856e4f",
+              "file": "specs/08-user-profile.spec.ts",
+              "line": 45,
+              "column": 9
+            },
+            {
+              "title": "42 – API: PUT /users/me updates designation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1387,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:43.558Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee93496a929e5f1f4691-729e90ec03dc00cb0232",
+              "file": "specs/08-user-profile.spec.ts",
+              "line": 60,
+              "column": 9
+            },
+            {
+              "title": "43 – API: GET /users lists all users",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1868,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:45.729Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee93496a929e5f1f4691-331558aa4ed44e1fb3ff",
+              "file": "specs/08-user-profile.spec.ts",
+              "line": 81,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "specs/09-api-contracts.spec.ts",
+      "file": "specs/09-api-contracts.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Backend API Contract Tests",
+          "file": "specs/09-api-contracts.spec.ts",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "44 – POST /auth/login returns token and user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 145,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:10.326Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-c5270a2ae55c971b0bed",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 38,
+              "column": 9
+            },
+            {
+              "title": "45 – POST /auth/login rejects invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 139,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.489Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-1d05329cd2a390875e38",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 49,
+              "column": 9
+            },
+            {
+              "title": "46 – GET /auth/verify validates a live token",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 17,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.637Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-b675abb6ebac51db49a7",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 56,
+              "column": 9
+            },
+            {
+              "title": "47 – GET /auth/verify rejects bad token",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 13,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.662Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-eae1d455d48d4dedddfc",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 64,
+              "column": 9
+            },
+            {
+              "title": "48 – GET /sellers returns paginated list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 26,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.684Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-d547010b05919266eb2c",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 73,
+              "column": 9
+            },
+            {
+              "title": "49 – GET /sellers/:id returns detailed seller",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 85,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.722Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-a75be1d250335d150959",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 84,
+              "column": 9
+            },
+            {
+              "title": "50 – GET /sellers/:id returns 404 for unknown id",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 39,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.818Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-e083526627e3786cc802",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 96,
+              "column": 9
+            },
+            {
+              "title": "51 – GET /posts returns paginated posts with isLiked/isBookmarked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 44,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.866Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-e681ed8bd983a7f718f1",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 105,
+              "column": 9
+            },
+            {
+              "title": "52 – POST /posts creates a new post",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 129,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:11.931Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-e5fb8a3e8688ba14ae25",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 119,
+              "column": 9
+            },
+            {
+              "title": "53 – GET /posts?sellerId filters by seller",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 103,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:12.097Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-b51d99e8040c2eef335f",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 150,
+              "column": 9
+            },
+            {
+              "title": "54 – GET /health returns ok",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 60,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-27T07:59:12.266Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ebdaf6a33e61d4a935c-25824c7b9c226b1d9d5c",
+              "file": "specs/09-api-contracts.spec.ts",
+              "line": 164,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-02-27T07:57:51.109Z",
+    "duration": 274422.06,
+    "expected": 43,
+    "skipped": 4,
+    "unexpected": 9,
+    "flaky": 1
+  }
+}

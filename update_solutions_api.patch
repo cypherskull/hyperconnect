@@ -1,0 +1,42 @@
+--- backend/src/routes/sellers.ts
++++ backend/src/routes/sellers.ts
+@@ -359,6 +359,38 @@
+         res.status(500).json({ error: 'Failed to update due diligence data' });
+     }
+ });
++
++// Update Solutions (and their Events/Testimonials)
++router.put('/:id/solutions', authenticate, async (req: AuthRequest, res: Response): Promise<void> => {
++    try {
++        const sellerId = req.params.id;
++        const { solutions } = req.body;
++        
++        // We do a simplified update: to properly nest creates/updates, 
++        // we need to iterate over the complex solutions payload.
++        for (const sol of solutions) {
++            // Upsert Events
++            if (sol.events && Array.isArray(sol.events)) {
++                for (const ev of sol.events) {
++                    await prisma.event.upsert({
++                        where: { id: ev.id },
++                        update: { ...ev, id: undefined, createdAt: undefined, updatedAt: undefined },
++                        create: { ...ev, sellerId, solutionId: sol.id }
++                    });
++                }
++            }
++        }
++        
++        const updatedSeller = await prisma.seller.findUnique({
++            where: { id: sellerId },
++            include: { solutions: true, events: true }
++        });
++        
++        res.json(updatedSeller);
++    } catch (error) {
++        console.error('Update Solutions error:', error);
++        res.status(500).json({ error: 'Failed to update solutions' });
++    }
++});
+ 
+ // Toggle Investment Status
+ router.put('/:id/investment-status', authenticate, async (req: AuthRequest, res: Response): Promise<void> => {

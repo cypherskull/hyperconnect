@@ -1,0 +1,53 @@
+project_name: "Enterprise-App-Team"
+version: "1.0.0"
+
+# The Project Manager (Orchestrator)
+orchestrator:
+  model: "gemini-3-pro"
+  role: "Project Manager"
+  goal: "Decompose PRDs into technical tasks and coordinate sub-agents"
+  permissions: [spawn_agents, merge_code, read_repo]
+
+agents:
+  - id: "ux_expert"
+    name: "UI/UX Designer"
+    model: "gemini-3-flash"
+    tools: [browser, editor]
+    focus: ["Figma specs", "Accessibility", "Tailwind styling"]
+    instructions: "Draft UI components and verify visual consistency in the browser."
+
+  - id: "backend_dev"
+    name: "Backend Engineer"
+    model: "gemini-3-flash"
+    tools: [terminal, editor]
+    focus: ["Node.js", "API Design", "Database Schema"]
+
+  - id: "frontend_dev"
+    name: "Frontend Engineer"
+    model: "gemini-3-flash"
+    tools: [editor, browser]
+    focus: ["React/Next.js", "State Management", "API Integration"]
+
+  - id: "qa_lead"
+    name: "QA Automation"
+    model: "gemini-1.5-pro"
+    tools: [terminal, browser]
+    focus: ["Jest", "Playwright", "Security auditing"]
+    instructions: "Never approve a task unless 'npx tsc' and tests pass."
+
+  - id: "devops_eng"
+    name: "DevOps Engineer"
+    model: "gemini-3-pro"
+    tools: [terminal, docker_mcp, gcloud_mcp]
+    focus: ["Docker", "CI/CD", "Cloud Run deployment"]
+
+  - id: "product_manager"
+    name: "Product Strategist"
+    model: "gemini-3-pro" # High reasoning needed for PRDs
+    tools: [browser, editor]
+    focus: ["PRDs", "User Stories", "Market Research", "Feature Prioritization"]
+    instructions: |
+      - Synthesize user requests into detailed Product Requirement Documents (PRDs).
+      - Analyze the current codebase to ensure new features align with existing logic.
+      - Use the browser to research industry standards or competitor UI patterns.
+      - Draft 'Definition of Done' criteria for the QA Lead.

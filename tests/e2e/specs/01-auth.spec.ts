@@ -1,0 +1,49 @@
+/**
+ * SPEC: Authentication
+ * Covers: Login success, login failure, logout
+ */
+import { test, expect } from '@playwright/test';
+import { AuthPage } from '../fixtures/pageObjects';
+import { USERS } from '../fixtures/testData';
+
+test.describe('Authentication', () => {
+
+    test('01 – login page renders on first visit', async ({ page }) => {
+        await page.goto('/');
+        await expect(page.locator('h1, h2').filter({ hasText: /Hyper\s*Connect/i }).first()).toBeVisible();
+        await expect(page.locator('input[type="email"]')).toBeVisible();
+        await expect(page.locator('input[type="password"]')).toBeVisible();
+        await expect(page.locator('button[type="submit"]')).toBeVisible();
+    });
+
+    test('02 – login fails with wrong password', async ({ page }) => {
+        await page.goto('/');
+        await page.evaluate(() => localStorage.clear());
+        await page.reload();
+        await page.fill('input[type="email"]', USERS.admin.email);
+        await page.fill('input[type="password"]', 'wrongpassword');
+        await page.click('button[type="submit"]');
+        // Should NOT navigate away from login — still see email input
+        await page.waitForTimeout(2000);
+        const emailInput = page.locator('input[type="email"]');
+        await expect(emailInput).toBeVisible();
+    });
+
+    test('03 – admin can log in and see the feed', async ({ page }) => {
+        const auth = new AuthPage(page);
+        await auth.login('admin');
+        await expect(page.locator('text=Businesses to Watch')).toBeVisible();
+        await expect(page.locator('text=What\'s trending')).toBeVisible();
+    });
+
+    test('04 – sign-up tab is accessible', async ({ page }) => {
+        await page.goto('/');
+        await page.evaluate(() => localStorage.clear());
+        await page.reload();
+        // Click Sign Up tab
+        const signUpTab = page.getByRole('button', { name: 'Sign Up' });
+        await signUpTab.click();
+        await expect(page.locator('text=Sign Up with Google')).toBeVisible();
+    });
+
+});

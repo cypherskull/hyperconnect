@@ -1,0 +1,2579 @@
+
+> hyperconnect-tests@1.0.0 test
+> npx playwright test --config=playwright.config.ts
+
+
+Running 54 tests using 5 workers
+
+  ✓   5 [chromium] › e2e/specs/05-connection-requests.spec.ts:19:9 › Connection Requests › 29 – API: connection request is saved to DB (36ms)
+  ✓   6 [chromium] › e2e/specs/05-connection-requests.spec.ts:55:9 › Connection Requests › 30 – API: inbox returns the connection request after sending (10ms)
+  ✓   7 [chromium] › e2e/specs/05-connection-requests.spec.ts:69:9 › Connection Requests › 31 – API: duplicate connection request returns 409 (16ms)
+  ✓   8 [chromium] › e2e/specs/05-connection-requests.spec.ts:90:9 › Connection Requests › 32 – API: inbox item can be archived (20ms)
+  ✓   1 [chromium] › e2e/specs/01-auth.spec.ts:11:9 › Authentication › 01 – login page renders on first visit (1.5s)
+  ✓  10 [chromium] › e2e/specs/01-auth.spec.ts:19:9 › Authentication › 02 – login fails with wrong password (2.9s)
+  ✘   2 [chromium] › e2e/specs/04-seller-profile.spec.ts:32:9 › Seller Profile Page › 17 – seller profile page renders correctly (11.7s)
+  ✘   9 [chromium] › e2e/specs/06-inbox.spec.ts:16:9 › Inbox › 33 – inbox page is accessible from nav bar (11.5s)
+  ✘   4 [chromium] › e2e/specs/03-post-interactions.spec.ts:27:9 › Post Interactions › 11 – can like a post (UI toggle) (11.7s)
+  ✘   3 [chromium] › e2e/specs/02-feed.spec.ts:15:9 › Feed › 05 – feed loads with "What's trending" section (11.9s)
+  ✘  11 [chromium] › e2e/specs/01-auth.spec.ts:32:9 › Authentication › 03 – admin can log in and see the feed (10.5s)
+  ✘  15 [chromium] › e2e/specs/04-seller-profile.spec.ts:32:9 › Seller Profile Page › 17 – seller profile page renders correctly (retry #1) (17.2s)
+  ✘  13 [chromium] › e2e/specs/02-feed.spec.ts:15:9 › Feed › 05 – feed loads with "What's trending" section (retry #1) (17.6s)
+  ✘  14 [chromium] › e2e/specs/03-post-interactions.spec.ts:27:9 › Post Interactions › 11 – can like a post (UI toggle) (retry #1) (17.5s)
+  ✘  12 [chromium] › e2e/specs/06-inbox.spec.ts:16:9 › Inbox › 33 – inbox page is accessible from nav bar (retry #1) (17.8s)
+  ✘  16 [chromium] › e2e/specs/01-auth.spec.ts:32:9 › Authentication › 03 – admin can log in and see the feed (retry #1) (10.5s)
+  ✘  19 [chromium] › e2e/specs/02-feed.spec.ts:21:9 › Feed › 06 – "Businesses to Watch" section shows seller cards (10.5s)
+  ✘  20 [chromium] › e2e/specs/06-inbox.spec.ts:22:9 › Inbox › 34 – inbox lists connection requests (10.5s)
+  ✘  17 [chromium] › e2e/specs/04-seller-profile.spec.ts:46:9 › Seller Profile Page › 18 – About tab is default and shows description (10.2s)
+  ✘  18 [chromium] › e2e/specs/03-post-interactions.spec.ts:44:9 › Post Interactions › 12 – can bookmark a post (UI toggle) (10.5s)
+  ✘  24 [chromium] › e2e/specs/06-inbox.spec.ts:22:9 › Inbox › 34 – inbox lists connection requests (retry #1) (10.1s)
+  ✘  22 [chromium] › e2e/specs/02-feed.spec.ts:21:9 › Feed › 06 – "Businesses to Watch" section shows seller cards (retry #1) (10.3s)
+  ✘  23 [chromium] › e2e/specs/04-seller-profile.spec.ts:46:9 › Seller Profile Page › 18 – About tab is default and shows description (retry #1) (11.2s)
+  ✘  25 [chromium] › e2e/specs/03-post-interactions.spec.ts:44:9 › Post Interactions › 12 – can bookmark a post (UI toggle) (retry #1) (11.6s)
+  ✘  21 [chromium] › e2e/specs/01-auth.spec.ts:39:9 › Authentication › 04 – sign-up tab is accessible (30.2s)
+  ✘  26 [chromium] › e2e/specs/06-inbox.spec.ts:39:9 › Inbox › 35 – inbox shows message category items (9.6s)
+  ✘  27 [chromium] › e2e/specs/02-feed.spec.ts:29:9 › Feed › 07 – "Latest Updates" section shows posts (9.6s)
+  ✘  28 [chromium] › e2e/specs/04-seller-profile.spec.ts:52:9 › Seller Profile Page › 19 – Posts tab shows the seller's posts (9.7s)
+  ✘  29 [chromium] › e2e/specs/03-post-interactions.spec.ts:55:9 › Post Interactions › 13 – comment modal opens and accepts text (9.4s)
+  ✘  31 [chromium] › e2e/specs/06-inbox.spec.ts:39:9 › Inbox › 35 – inbox shows message category items (retry #1) (11.1s)
+  ✘  32 [chromium] › e2e/specs/02-feed.spec.ts:29:9 › Feed › 07 – "Latest Updates" section shows posts (retry #1) (11.1s)
+  ✘  33 [chromium] › e2e/specs/04-seller-profile.spec.ts:52:9 › Seller Profile Page › 19 – Posts tab shows the seller's posts (retry #1) (10.5s)
+  ✘  34 [chromium] › e2e/specs/03-post-interactions.spec.ts:55:9 › Post Interactions › 13 – comment modal opens and accepts text (retry #1) (10.5s)
+  ✘  35 [chromium] › e2e/specs/06-inbox.spec.ts:54:9 › Inbox › 36 – API: inbox returns items for authenticated user (9.7s)
+  ✘  36 [chromium] › e2e/specs/02-feed.spec.ts:37:9 › Feed › 08 – trending slider navigates with arrows (9.8s)
+  ✘  37 [chromium] › e2e/specs/04-seller-profile.spec.ts:61:9 › Seller Profile Page › 20 – user can click Follow on seller profile (10.8s)
+  ✘  38 [chromium] › e2e/specs/03-post-interactions.spec.ts:79:9 › Post Interactions › 14 – API: like endpoint persists to DB (9.9s)
+  ✘  30 [chromium] › e2e/specs/01-auth.spec.ts:39:9 › Authentication › 04 – sign-up tab is accessible (retry #1) (30.9s)
+  ✘  39 [chromium] › e2e/specs/02-feed.spec.ts:37:9 › Feed › 08 – trending slider navigates with arrows (retry #1) (12.8s)
+  ✘  40 [chromium] › e2e/specs/06-inbox.spec.ts:54:9 › Inbox › 36 – API: inbox returns items for authenticated user (retry #1) (12.9s)
+  ✘  43 [chromium] › e2e/specs/07-network.spec.ts:18:9 › Network Page › 38 – network page renders without crash (10.1s)
+  ✘  41 [chromium] › e2e/specs/04-seller-profile.spec.ts:61:9 › Seller Profile Page › 20 – user can click Follow on seller profile (retry #1) (10.7s)
+  ✘  42 [chromium] › e2e/specs/03-post-interactions.spec.ts:79:9 › Post Interactions › 14 – API: like endpoint persists to DB (retry #1) (11.1s)
+  ✘  45 [chromium] › e2e/specs/02-feed.spec.ts:55:9 › Feed › 09 – InfoCarousel is present and has content (10.9s)
+  ✘  44 [chromium] › e2e/specs/06-inbox.spec.ts:68:9 › Inbox › 37 – API: inbox requires authentication (10.8s)
+  ✘  47 [chromium] › e2e/specs/04-seller-profile.spec.ts:76:9 › Seller Profile Page › 21 – Connect button sends connection request (10.1s)
+  ✘  46 [chromium] › e2e/specs/07-network.spec.ts:18:9 › Network Page › 38 – network page renders without crash (retry #1) (10.6s)
+  ✘  48 [chromium] › e2e/specs/03-post-interactions.spec.ts:106:9 › Post Interactions › 15 – API: bookmark endpoint persists to DB (10.5s)
+  ✘  49 [chromium] › e2e/specs/06-inbox.spec.ts:68:9 › Inbox › 37 – API: inbox requires authentication (retry #1) (10.8s)
+  ✘  50 [chromium] › e2e/specs/02-feed.spec.ts:55:9 › Feed › 09 – InfoCarousel is present and has content (retry #1) (10.9s)
+  ✘  52 [chromium] › e2e/specs/07-network.spec.ts:27:9 › Network Page › 39 – network page shows seller or user cards (9.4s)
+  ✘  51 [chromium] › e2e/specs/04-seller-profile.spec.ts:76:9 › Seller Profile Page › 21 – Connect button sends connection request (retry #1) (10.7s)
+  ✘  53 [chromium] › e2e/specs/03-post-interactions.spec.ts:106:9 › Post Interactions › 15 – API: bookmark endpoint persists to DB (retry #1) (11.6s)
+  ✘  54 [chromium] › e2e/specs/02-feed.spec.ts:60:9 › Feed › 10 – bottom navigation bar is visible on feed (9.9s)
+  ✘  55 [chromium] › e2e/specs/08-user-profile.spec.ts:16:9 › User Profile Management › 40 – profile page opens from user avatar/menu (10.0s)
+  ✘  57 [chromium] › e2e/specs/04-seller-profile.spec.ts:89:9 › Seller Profile Page › 22 – Message modal opens and can be submitted (9.6s)
+  ✘  56 [chromium] › e2e/specs/07-network.spec.ts:27:9 › Network Page › 39 – network page shows seller or user cards (retry #1) (11.0s)
+  ✓  62 [chromium] › e2e/specs/09-api-contracts.spec.ts:38:9 › Backend API Contract Tests › 44 – POST /auth/login returns token and user (118ms)
+  ✓  63 [chromium] › e2e/specs/09-api-contracts.spec.ts:49:9 › Backend API Contract Tests › 45 – POST /auth/login rejects invalid credentials (22ms)
+  ✓  64 [chromium] › e2e/specs/09-api-contracts.spec.ts:56:9 › Backend API Contract Tests › 46 – GET /auth/verify validates a live token (16ms)
+  ✓  65 [chromium] › e2e/specs/09-api-contracts.spec.ts:64:9 › Backend API Contract Tests › 47 – GET /auth/verify rejects bad token (12ms)
+  ✓  66 [chromium] › e2e/specs/09-api-contracts.spec.ts:73:9 › Backend API Contract Tests › 48 – GET /sellers returns paginated list (44ms)
+  ✓  67 [chromium] › e2e/specs/09-api-contracts.spec.ts:84:9 › Backend API Contract Tests › 49 – GET /sellers/:id returns detailed seller (36ms)
+  ✓  68 [chromium] › e2e/specs/09-api-contracts.spec.ts:96:9 › Backend API Contract Tests › 50 – GET /sellers/:id returns 404 for unknown id (14ms)
+  ✓  69 [chromium] › e2e/specs/09-api-contracts.spec.ts:105:9 › Backend API Contract Tests › 51 – GET /posts returns paginated posts with isLiked/isBookmarked (38ms)
+  ✘  58 [chromium] › e2e/specs/03-post-interactions.spec.ts:127:9 › Post Interactions › 16 – API: comment is saved and returned (9.9s)
+  ✓  70 [chromium] › e2e/specs/09-api-contracts.spec.ts:119:9 › Backend API Contract Tests › 52 – POST /posts creates a new post (49ms)
+  ✓  71 [chromium] › e2e/specs/09-api-contracts.spec.ts:150:9 › Backend API Contract Tests › 53 – GET /posts?sellerId filters by seller (14ms)
+  ✓  72 [chromium] › e2e/specs/09-api-contracts.spec.ts:164:9 › Backend API Contract Tests › 54 – GET /health returns ok (6ms)
+  ✘  60 [chromium] › e2e/specs/08-user-profile.spec.ts:16:9 › User Profile Management › 40 – profile page opens from user avatar/menu (retry #1) (10.3s)
+  ✘  59 [chromium] › e2e/specs/02-feed.spec.ts:60:9 › Feed › 10 – bottom navigation bar is visible on feed (retry #1) (10.6s)
+  ✘  61 [chromium] › e2e/specs/04-seller-profile.spec.ts:89:9 › Seller Profile Page › 22 – Message modal opens and can be submitted (retry #1) (9.3s)
+  ✘  73 [chromium] › e2e/specs/03-post-interactions.spec.ts:127:9 › Post Interactions › 16 – API: comment is saved and returned (retry #1) (9.4s)
+  ✘  74 [chromium] › e2e/specs/08-user-profile.spec.ts:45:9 › User Profile Management › 41 – API: GET /users/me returns current user (8.8s)
+  ✘  75 [chromium] › e2e/specs/04-seller-profile.spec.ts:110:9 › Seller Profile Page › 23 – Meeting request modal opens (8.9s)
+  ✘  76 [chromium] › e2e/specs/08-user-profile.spec.ts:45:9 › User Profile Management › 41 – API: GET /users/me returns current user (retry #1) (9.3s)
+  ✘  77 [chromium] › e2e/specs/04-seller-profile.spec.ts:110:9 › Seller Profile Page › 23 – Meeting request modal opens (retry #1) (9.0s)
+  ✘  78 [chromium] › e2e/specs/08-user-profile.spec.ts:60:9 › User Profile Management › 42 – API: PUT /users/me updates designation (8.9s)
+  ✘  79 [chromium] › e2e/specs/04-seller-profile.spec.ts:127:9 › Seller Profile Page › 24 – Write a Testimonial button opens modal (8.8s)
+  ✘  80 [chromium] › e2e/specs/08-user-profile.spec.ts:60:9 › User Profile Management › 42 – API: PUT /users/me updates designation (retry #1) (9.2s)
+  ✘  81 [chromium] › e2e/specs/04-seller-profile.spec.ts:127:9 › Seller Profile Page › 24 – Write a Testimonial button opens modal (retry #1) (9.5s)
+  ✘  82 [chromium] › e2e/specs/08-user-profile.spec.ts:81:9 › User Profile Management › 43 – API: GET /users lists all users (9.2s)
+  ✘  83 [chromium] › e2e/specs/04-seller-profile.spec.ts:146:9 › Seller Profile Page › 25 – API: follow/unfollow seller persists to DB (9.0s)
+  ✘  84 [chromium] › e2e/specs/08-user-profile.spec.ts:81:9 › User Profile Management › 43 – API: GET /users lists all users (retry #1) (9.3s)
+  ✘  85 [chromium] › e2e/specs/04-seller-profile.spec.ts:146:9 › Seller Profile Page › 25 – API: follow/unfollow seller persists to DB (retry #1) (9.0s)
+  ✘  86 [chromium] › e2e/specs/04-seller-profile.spec.ts:171:9 › Seller Profile Page › 26 – API: message a seller persists to DB (8.7s)
+  ✘  87 [chromium] › e2e/specs/04-seller-profile.spec.ts:171:9 › Seller Profile Page › 26 – API: message a seller persists to DB (retry #1) (9.0s)
+  ✘  88 [chromium] › e2e/specs/04-seller-profile.spec.ts:191:9 › Seller Profile Page › 27 – API: meeting request persists to DB (8.8s)
+  ✘  89 [chromium] › e2e/specs/04-seller-profile.spec.ts:191:9 › Seller Profile Page › 27 – API: meeting request persists to DB (retry #1) (9.0s)
+  ✘  90 [chromium] › e2e/specs/04-seller-profile.spec.ts:211:9 › Seller Profile Page › 28 – Back button returns to feed (8.7s)
+  ✘  91 [chromium] › e2e/specs/04-seller-profile.spec.ts:211:9 › Seller Profile Page › 28 – Back button returns to feed (retry #1) (8.9s)
+
+
+  1) [chromium] › e2e/specs/01-auth.spec.ts:32:9 › Authentication › 03 – admin can log in and see the feed 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/01-auth.spec.ts:34:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/01-auth.spec.ts:34:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › e2e/specs/01-auth.spec.ts:39:9 › Authentication › 04 – sign-up tab is accessible ─
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#tab-signup')[22m
+
+
+      43 |         // Click Sign Up tab
+      44 |         const signUpTab = page.locator('#tab-signup');
+    > 45 |         await signUpTab.click();
+         |                         ^
+      46 |         await expect(page.locator('text=Sign Up with Google')).toBeVisible();
+      47 |     });
+      48 |
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/01-auth.spec.ts:45:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authentication-04-–-sign-up-tab-is-accessible-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authentication-04-–-sign-up-tab-is-accessible-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-auth-Authentication-04-–-sign-up-tab-is-accessible-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#tab-signup')[22m
+
+
+      43 |         // Click Sign Up tab
+      44 |         const signUpTab = page.locator('#tab-signup');
+    > 45 |         await signUpTab.click();
+         |                         ^
+      46 |         await expect(page.locator('text=Sign Up with Google')).toBeVisible();
+      47 |     });
+      48 |
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/01-auth.spec.ts:45:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authentication-04-–-sign-up-tab-is-accessible-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authentication-04-–-sign-up-tab-is-accessible-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-auth-Authentication-04-–-sign-up-tab-is-accessible-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authentication-04-–-sign-up-tab-is-accessible-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-auth-Authentication-04-–-sign-up-tab-is-accessible-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › e2e/specs/02-feed.spec.ts:15:9 › Feed › 05 – feed loads with "What's trending" section 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-05-–-fe-6606b-ith-What-s-trending-section-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-05-–-fe-6606b-ith-What-s-trending-section-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-05-–-fe-6606b-ith-What-s-trending-section-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-05-–-fe-6606b-ith-What-s-trending-section-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-05-–-fe-6606b-ith-What-s-trending-section-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-05-–-fe-6606b-ith-What-s-trending-section-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-05-–-fe-6606b-ith-What-s-trending-section-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-02-feed-Feed-05-–-fe-6606b-ith-What-s-trending-section-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › e2e/specs/02-feed.spec.ts:21:9 › Feed › 06 – "Businesses to Watch" section shows seller cards 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-06-–-Bu-23e56--section-shows-seller-cards-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-06-–-Bu-23e56--section-shows-seller-cards-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-06-–-Bu-23e56--section-shows-seller-cards-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-06-–-Bu-23e56--section-shows-seller-cards-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-06-–-Bu-23e56--section-shows-seller-cards-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-06-–-Bu-23e56--section-shows-seller-cards-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-06-–-Bu-23e56--section-shows-seller-cards-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-02-feed-Feed-06-–-Bu-23e56--section-shows-seller-cards-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › e2e/specs/02-feed.spec.ts:29:9 › Feed › 07 – "Latest Updates" section shows posts 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-07-–-Latest-Updates-section-shows-posts-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-07-–-Latest-Updates-section-shows-posts-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-07-–-Latest-Updates-section-shows-posts-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-07-–-Latest-Updates-section-shows-posts-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-07-–-Latest-Updates-section-shows-posts-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-07-–-Latest-Updates-section-shows-posts-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-07-–-Latest-Updates-section-shows-posts-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-02-feed-Feed-07-–-Latest-Updates-section-shows-posts-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › e2e/specs/02-feed.spec.ts:37:9 › Feed › 08 – trending slider navigates with arrows 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-08-–-tr-6da07-lider-navigates-with-arrows-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-08-–-tr-6da07-lider-navigates-with-arrows-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-08-–-tr-6da07-lider-navigates-with-arrows-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-08-–-tr-6da07-lider-navigates-with-arrows-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-08-–-tr-6da07-lider-navigates-with-arrows-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-08-–-tr-6da07-lider-navigates-with-arrows-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-08-–-tr-6da07-lider-navigates-with-arrows-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-02-feed-Feed-08-–-tr-6da07-lider-navigates-with-arrows-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › e2e/specs/02-feed.spec.ts:55:9 › Feed › 09 – InfoCarousel is present and has content 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-09-–-In-e029e--is-present-and-has-content-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-09-–-In-e029e--is-present-and-has-content-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-09-–-In-e029e--is-present-and-has-content-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-09-–-In-e029e--is-present-and-has-content-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-09-–-In-e029e--is-present-and-has-content-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-09-–-In-e029e--is-present-and-has-content-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-09-–-In-e029e--is-present-and-has-content-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-02-feed-Feed-09-–-In-e029e--is-present-and-has-content-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › e2e/specs/02-feed.spec.ts:60:9 › Feed › 10 – bottom navigation bar is visible on feed 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-10-–-bo-103e3-tion-bar-is-visible-on-feed-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-10-–-bo-103e3-tion-bar-is-visible-on-feed-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-10-–-bo-103e3-tion-bar-is-visible-on-feed-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/02-feed.spec.ts:12:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-10-–-bo-103e3-tion-bar-is-visible-on-feed-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-10-–-bo-103e3-tion-bar-is-visible-on-feed-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-02-feed-Feed-10-–-bo-103e3-tion-bar-is-visible-on-feed-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-02-feed-Feed-10-–-bo-103e3-tion-bar-is-visible-on-feed-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-02-feed-Feed-10-–-bo-103e3-tion-bar-is-visible-on-feed-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium] › e2e/specs/03-post-interactions.spec.ts:27:9 › Post Interactions › 11 – can like a post (UI toggle) 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-804c4--can-like-a-post-UI-toggle--chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-804c4--can-like-a-post-UI-toggle--chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-804c4--can-like-a-post-UI-toggle--chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-804c4--can-like-a-post-UI-toggle--chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-804c4--can-like-a-post-UI-toggle--chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-804c4--can-like-a-post-UI-toggle--chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-804c4--can-like-a-post-UI-toggle--chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-03-post-interactions-804c4--can-like-a-post-UI-toggle--chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium] › e2e/specs/03-post-interactions.spec.ts:44:9 › Post Interactions › 12 – can bookmark a post (UI toggle) 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-29d75--bookmark-a-post-UI-toggle--chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-29d75--bookmark-a-post-UI-toggle--chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-29d75--bookmark-a-post-UI-toggle--chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-29d75--bookmark-a-post-UI-toggle--chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-29d75--bookmark-a-post-UI-toggle--chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-29d75--bookmark-a-post-UI-toggle--chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-29d75--bookmark-a-post-UI-toggle--chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-03-post-interactions-29d75--bookmark-a-post-UI-toggle--chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium] › e2e/specs/03-post-interactions.spec.ts:55:9 › Post Interactions › 13 – comment modal opens and accepts text 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-d0251-odal-opens-and-accepts-text-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-d0251-odal-opens-and-accepts-text-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-d0251-odal-opens-and-accepts-text-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-d0251-odal-opens-and-accepts-text-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-d0251-odal-opens-and-accepts-text-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-d0251-odal-opens-and-accepts-text-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-d0251-odal-opens-and-accepts-text-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-03-post-interactions-d0251-odal-opens-and-accepts-text-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium] › e2e/specs/03-post-interactions.spec.ts:79:9 › Post Interactions › 14 – API: like endpoint persists to DB 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-4bd57-ike-endpoint-persists-to-DB-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-4bd57-ike-endpoint-persists-to-DB-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-4bd57-ike-endpoint-persists-to-DB-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-4bd57-ike-endpoint-persists-to-DB-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-4bd57-ike-endpoint-persists-to-DB-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-4bd57-ike-endpoint-persists-to-DB-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-4bd57-ike-endpoint-persists-to-DB-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-03-post-interactions-4bd57-ike-endpoint-persists-to-DB-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [chromium] › e2e/specs/03-post-interactions.spec.ts:106:9 › Post Interactions › 15 – API: bookmark endpoint persists to DB 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-03-post-interactions-39a67-ark-endpoint-persists-to-DB-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [chromium] › e2e/specs/03-post-interactions.spec.ts:127:9 › Post Interactions › 16 – API: comment is saved and returned 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-170c3-mment-is-saved-and-returned-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-170c3-mment-is-saved-and-returned-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-170c3-mment-is-saved-and-returned-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/03-post-interactions.spec.ts:24:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-170c3-mment-is-saved-and-returned-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-170c3-mment-is-saved-and-returned-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-03-post-interactions-170c3-mment-is-saved-and-returned-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-03-post-interactions-170c3-mment-is-saved-and-returned-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-03-post-interactions-170c3-mment-is-saved-and-returned-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  15) [chromium] › e2e/specs/04-seller-profile.spec.ts:32:9 › Seller Profile Page › 17 – seller profile page renders correctly 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-de13a-file-page-renders-correctly-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-de13a-file-page-renders-correctly-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-de13a-file-page-renders-correctly-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-de13a-file-page-renders-correctly-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-de13a-file-page-renders-correctly-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-de13a-file-page-renders-correctly-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-de13a-file-page-renders-correctly-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-de13a-file-page-renders-correctly-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  16) [chromium] › e2e/specs/04-seller-profile.spec.ts:46:9 › Seller Profile Page › 18 – About tab is default and shows description 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8ae7a-fault-and-shows-description-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8ae7a-fault-and-shows-description-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-8ae7a-fault-and-shows-description-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8ae7a-fault-and-shows-description-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8ae7a-fault-and-shows-description-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-8ae7a-fault-and-shows-description-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8ae7a-fault-and-shows-description-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-8ae7a-fault-and-shows-description-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  17) [chromium] › e2e/specs/04-seller-profile.spec.ts:52:9 › Seller Profile Page › 19 – Posts tab shows the seller's posts 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-4dd28-ab-shows-the-seller-s-posts-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-4dd28-ab-shows-the-seller-s-posts-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-4dd28-ab-shows-the-seller-s-posts-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-4dd28-ab-shows-the-seller-s-posts-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-4dd28-ab-shows-the-seller-s-posts-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-4dd28-ab-shows-the-seller-s-posts-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-4dd28-ab-shows-the-seller-s-posts-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-4dd28-ab-shows-the-seller-s-posts-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  18) [chromium] › e2e/specs/04-seller-profile.spec.ts:61:9 › Seller Profile Page › 20 – user can click Follow on seller profile 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-0ac9b-ck-Follow-on-seller-profile-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  19) [chromium] › e2e/specs/04-seller-profile.spec.ts:76:9 › Seller Profile Page › 21 – Connect button sends connection request 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-10632-on-sends-connection-request-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  20) [chromium] › e2e/specs/04-seller-profile.spec.ts:89:9 › Seller Profile Page › 22 – Message modal opens and can be submitted 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-1c30f--opens-and-can-be-submitted-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-1c30f--opens-and-can-be-submitted-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-1c30f--opens-and-can-be-submitted-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-1c30f--opens-and-can-be-submitted-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-1c30f--opens-and-can-be-submitted-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-1c30f--opens-and-can-be-submitted-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-1c30f--opens-and-can-be-submitted-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-1c30f--opens-and-can-be-submitted-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  21) [chromium] › e2e/specs/04-seller-profile.spec.ts:110:9 › Seller Profile Page › 23 – Meeting request modal opens 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8d396-Meeting-request-modal-opens-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8d396-Meeting-request-modal-opens-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-8d396-Meeting-request-modal-opens-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8d396-Meeting-request-modal-opens-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8d396-Meeting-request-modal-opens-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-8d396-Meeting-request-modal-opens-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-8d396-Meeting-request-modal-opens-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-8d396-Meeting-request-modal-opens-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  22) [chromium] › e2e/specs/04-seller-profile.spec.ts:127:9 › Seller Profile Page › 24 – Write a Testimonial button opens modal 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-fe47c-timonial-button-opens-modal-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  23) [chromium] › e2e/specs/04-seller-profile.spec.ts:146:9 › Seller Profile Page › 25 – API: follow/unfollow seller persists to DB 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-c632a-ollow-seller-persists-to-DB-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  24) [chromium] › e2e/specs/04-seller-profile.spec.ts:171:9 › Seller Profile Page › 26 – API: message a seller persists to DB 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-7eeda-age-a-seller-persists-to-DB-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  25) [chromium] › e2e/specs/04-seller-profile.spec.ts:191:9 › Seller Profile Page › 27 – API: meeting request persists to DB 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-b9e5c-ting-request-persists-to-DB-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  26) [chromium] › e2e/specs/04-seller-profile.spec.ts:211:9 › Seller Profile Page › 28 – Back button returns to feed 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/04-seller-profile.spec.ts:23:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-04-seller-profile-Se-86d90-Back-button-returns-to-feed-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  27) [chromium] › e2e/specs/06-inbox.spec.ts:16:9 › Inbox › 33 – inbox page is accessible from nav bar 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-33-–--a80aa--is-accessible-from-nav-bar-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-33-–--a80aa--is-accessible-from-nav-bar-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-33-–--a80aa--is-accessible-from-nav-bar-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-33-–--a80aa--is-accessible-from-nav-bar-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-33-–--a80aa--is-accessible-from-nav-bar-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-33-–--a80aa--is-accessible-from-nav-bar-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-33-–--a80aa--is-accessible-from-nav-bar-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-06-inbox-Inbox-33-–--a80aa--is-accessible-from-nav-bar-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  28) [chromium] › e2e/specs/06-inbox.spec.ts:22:9 › Inbox › 34 – inbox lists connection requests ──
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-34-–-inbox-lists-connection-requests-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-34-–-inbox-lists-connection-requests-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-34-–-inbox-lists-connection-requests-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-34-–-inbox-lists-connection-requests-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-34-–-inbox-lists-connection-requests-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-34-–-inbox-lists-connection-requests-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-34-–-inbox-lists-connection-requests-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-06-inbox-Inbox-34-–-inbox-lists-connection-requests-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  29) [chromium] › e2e/specs/06-inbox.spec.ts:39:9 › Inbox › 35 – inbox shows message category items 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-35-–-inbox-shows-message-category-items-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-35-–-inbox-shows-message-category-items-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-35-–-inbox-shows-message-category-items-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-35-–-inbox-shows-message-category-items-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-35-–-inbox-shows-message-category-items-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-35-–-inbox-shows-message-category-items-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-35-–-inbox-shows-message-category-items-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-06-inbox-Inbox-35-–-inbox-shows-message-category-items-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  30) [chromium] › e2e/specs/06-inbox.spec.ts:54:9 › Inbox › 36 – API: inbox returns items for authenticated user 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-36-–--923ae-tems-for-authenticated-user-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-36-–--923ae-tems-for-authenticated-user-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-36-–--923ae-tems-for-authenticated-user-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-36-–--923ae-tems-for-authenticated-user-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-36-–--923ae-tems-for-authenticated-user-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-36-–--923ae-tems-for-authenticated-user-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-36-–--923ae-tems-for-authenticated-user-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-06-inbox-Inbox-36-–--923ae-tems-for-authenticated-user-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  31) [chromium] › e2e/specs/06-inbox.spec.ts:68:9 › Inbox › 37 – API: inbox requires authentication 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-37-–-API-inbox-requires-authentication-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-37-–-API-inbox-requires-authentication-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-37-–-API-inbox-requires-authentication-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/06-inbox.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-37-–-API-inbox-requires-authentication-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-37-–-API-inbox-requires-authentication-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-06-inbox-Inbox-37-–-API-inbox-requires-authentication-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-06-inbox-Inbox-37-–-API-inbox-requires-authentication-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-06-inbox-Inbox-37-–-API-inbox-requires-authentication-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  32) [chromium] › e2e/specs/07-network.spec.ts:18:9 › Network Page › 38 – network page renders without crash 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-network.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-12b6d--page-renders-without-crash-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-12b6d--page-renders-without-crash-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-07-network-Network-P-12b6d--page-renders-without-crash-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-network.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-12b6d--page-renders-without-crash-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-12b6d--page-renders-without-crash-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-07-network-Network-P-12b6d--page-renders-without-crash-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-12b6d--page-renders-without-crash-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-07-network-Network-P-12b6d--page-renders-without-crash-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  33) [chromium] › e2e/specs/07-network.spec.ts:27:9 › Network Page › 39 – network page shows seller or user cards 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-network.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-fd888--shows-seller-or-user-cards-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-fd888--shows-seller-or-user-cards-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-07-network-Network-P-fd888--shows-seller-or-user-cards-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/07-network.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-fd888--shows-seller-or-user-cards-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-fd888--shows-seller-or-user-cards-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-07-network-Network-P-fd888--shows-seller-or-user-cards-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-07-network-Network-P-fd888--shows-seller-or-user-cards-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-07-network-Network-P-fd888--shows-seller-or-user-cards-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  34) [chromium] › e2e/specs/08-user-profile.spec.ts:16:9 › User Profile Management › 40 – profile page opens from user avatar/menu 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-c0c4b-opens-from-user-avatar-menu-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-c0c4b-opens-from-user-avatar-menu-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-08-user-profile-User-c0c4b-opens-from-user-avatar-menu-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-c0c4b-opens-from-user-avatar-menu-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-c0c4b-opens-from-user-avatar-menu-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-08-user-profile-User-c0c4b-opens-from-user-avatar-menu-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-c0c4b-opens-from-user-avatar-menu-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-08-user-profile-User-c0c4b-opens-from-user-avatar-menu-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  35) [chromium] › e2e/specs/08-user-profile.spec.ts:45:9 › User Profile Management › 41 – API: GET /users/me returns current user 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-08-user-profile-User-a96b6-ers-me-returns-current-user-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  36) [chromium] › e2e/specs/08-user-profile.spec.ts:60:9 › User Profile Management › 42 – API: PUT /users/me updates designation 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-8150f-sers-me-updates-designation-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-8150f-sers-me-updates-designation-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-08-user-profile-User-8150f-sers-me-updates-designation-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-8150f-sers-me-updates-designation-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-8150f-sers-me-updates-designation-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-08-user-profile-User-8150f-sers-me-updates-designation-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-8150f-sers-me-updates-designation-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-08-user-profile-User-8150f-sers-me-updates-designation-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  37) [chromium] › e2e/specs/08-user-profile.spec.ts:81:9 › User Profile Management › 43 – API: GET /users lists all users 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-4e489-I-GET-users-lists-all-users-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-4e489-I-GET-users-lists-all-users-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-08-user-profile-User-4e489-I-GET-users-lists-all-users-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/08-user-profile.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-4e489-I-GET-users-lists-all-users-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-4e489-I-GET-users-lists-all-users-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-08-user-profile-User-4e489-I-GET-users-lists-all-users-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-08-user-profile-User-4e489-I-GET-users-lists-all-users-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-08-user-profile-User-4e489-I-GET-users-lists-all-users-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  37 failed
+    [chromium] › e2e/specs/01-auth.spec.ts:32:9 › Authentication › 03 – admin can log in and see the feed 
+    [chromium] › e2e/specs/01-auth.spec.ts:39:9 › Authentication › 04 – sign-up tab is accessible ──
+    [chromium] › e2e/specs/02-feed.spec.ts:15:9 › Feed › 05 – feed loads with "What's trending" section 
+    [chromium] › e2e/specs/02-feed.spec.ts:21:9 › Feed › 06 – "Businesses to Watch" section shows seller cards 
+    [chromium] › e2e/specs/02-feed.spec.ts:29:9 › Feed › 07 – "Latest Updates" section shows posts ─
+    [chromium] › e2e/specs/02-feed.spec.ts:37:9 › Feed › 08 – trending slider navigates with arrows 
+    [chromium] › e2e/specs/02-feed.spec.ts:55:9 › Feed › 09 – InfoCarousel is present and has content 
+    [chromium] › e2e/specs/02-feed.spec.ts:60:9 › Feed › 10 – bottom navigation bar is visible on feed 
+    [chromium] › e2e/specs/03-post-interactions.spec.ts:27:9 › Post Interactions › 11 – can like a post (UI toggle) 
+    [chromium] › e2e/specs/03-post-interactions.spec.ts:44:9 › Post Interactions › 12 – can bookmark a post (UI toggle) 
+    [chromium] › e2e/specs/03-post-interactions.spec.ts:55:9 › Post Interactions › 13 – comment modal opens and accepts text 
+    [chromium] › e2e/specs/03-post-interactions.spec.ts:79:9 › Post Interactions › 14 – API: like endpoint persists to DB 
+    [chromium] › e2e/specs/03-post-interactions.spec.ts:106:9 › Post Interactions › 15 – API: bookmark endpoint persists to DB 
+    [chromium] › e2e/specs/03-post-interactions.spec.ts:127:9 › Post Interactions › 16 – API: comment is saved and returned 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:32:9 › Seller Profile Page › 17 – seller profile page renders correctly 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:46:9 › Seller Profile Page › 18 – About tab is default and shows description 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:52:9 › Seller Profile Page › 19 – Posts tab shows the seller's posts 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:61:9 › Seller Profile Page › 20 – user can click Follow on seller profile 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:76:9 › Seller Profile Page › 21 – Connect button sends connection request 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:89:9 › Seller Profile Page › 22 – Message modal opens and can be submitted 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:110:9 › Seller Profile Page › 23 – Meeting request modal opens 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:127:9 › Seller Profile Page › 24 – Write a Testimonial button opens modal 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:146:9 › Seller Profile Page › 25 – API: follow/unfollow seller persists to DB 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:171:9 › Seller Profile Page › 26 – API: message a seller persists to DB 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:191:9 › Seller Profile Page › 27 – API: meeting request persists to DB 
+    [chromium] › e2e/specs/04-seller-profile.spec.ts:211:9 › Seller Profile Page › 28 – Back button returns to feed 
+    [chromium] › e2e/specs/06-inbox.spec.ts:16:9 › Inbox › 33 – inbox page is accessible from nav bar 
+    [chromium] › e2e/specs/06-inbox.spec.ts:22:9 › Inbox › 34 – inbox lists connection requests ────
+    [chromium] › e2e/specs/06-inbox.spec.ts:39:9 › Inbox › 35 – inbox shows message category items ─
+    [chromium] › e2e/specs/06-inbox.spec.ts:54:9 › Inbox › 36 – API: inbox returns items for authenticated user 
+    [chromium] › e2e/specs/06-inbox.spec.ts:68:9 › Inbox › 37 – API: inbox requires authentication ─
+    [chromium] › e2e/specs/07-network.spec.ts:18:9 › Network Page › 38 – network page renders without crash 
+    [chromium] › e2e/specs/07-network.spec.ts:27:9 › Network Page › 39 – network page shows seller or user cards 
+    [chromium] › e2e/specs/08-user-profile.spec.ts:16:9 › User Profile Management › 40 – profile page opens from user avatar/menu 
+    [chromium] › e2e/specs/08-user-profile.spec.ts:45:9 › User Profile Management › 41 – API: GET /users/me returns current user 
+    [chromium] › e2e/specs/08-user-profile.spec.ts:60:9 › User Profile Management › 42 – API: PUT /users/me updates designation 
+    [chromium] › e2e/specs/08-user-profile.spec.ts:81:9 › User Profile Management › 43 – API: GET /users lists all users 
+  17 passed (4.7m)

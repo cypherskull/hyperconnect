@@ -1,0 +1,75 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › e2e/specs/01-auth.spec.ts:32:9 › Authentication › 03 – admin can log in and see the feed (9.2s)
+  ✘  2 [chromium] › e2e/specs/01-auth.spec.ts:32:9 › Authentication › 03 – admin can log in and see the feed (retry #1) (9.0s)
+
+
+  1) [chromium] › e2e/specs/01-auth.spec.ts:32:9 › Authentication › 03 – admin can log in and see the feed 
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/01-auth.spec.ts:34:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: page.waitForSelector: Timeout 8000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#nav-network') to be visible[22m
+
+
+       at fixtures/pageObjects.ts:29
+
+      27 |         await this.page.waitForSelector('h2', { timeout: TIMEOUTS.long });
+      28 |         // Wait for Header to be ready (at least one nav item)
+    > 29 |         await this.page.waitForSelector('#nav-network', { timeout: TIMEOUTS.medium });
+         |                         ^
+      30 |         await expect(this.page.locator('h2').first()).toBeVisible();
+      31 |     }
+      32 |
+        at AuthPage.login (/Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/fixtures/pageObjects.ts:29:25)
+        at /Users/cypher/Documents/dev_workspaces/Hyperconnect-main/tests/e2e/specs/01-auth.spec.ts:34:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/specs-01-auth-Authenticati-c861f-can-log-in-and-see-the-feed-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › e2e/specs/01-auth.spec.ts:32:9 › Authentication › 03 – admin can log in and see the feed 

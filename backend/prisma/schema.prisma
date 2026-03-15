@@ -1,0 +1,392 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                      String           @id @default(uuid())
+  name                    String
+  avatarUrl               String?
+  persona                 Persona
+  designation             String?
+  company                 String?
+  role                    Role             @default(Member)
+  personalEmail           String           @unique
+  isPersonalEmailVerified Boolean          @default(false)
+  businessEmail           String?
+  isBusinessEmailVerified Boolean          @default(false)
+  phone                   String?
+  password                String
+  wantsEmailNotifications Boolean          @default(true)
+  walletBalance           Float            @default(0)
+  subscriptionPlan        SubscriptionPlan @default(Free)
+  referralCode            String           @unique
+  createdAt               DateTime         @default(now())
+  updatedAt               DateTime         @updatedAt
+  enterpriseId            String?
+  bookmarks               Bookmark[]
+  comments                Comment[]
+  connectionsTo           Connection[]     @relation("ConnectionFrom")
+  connectionsFrom         Connection[]     @relation("ConnectionTo")
+  sentInboxItems          InboxItem[]      @relation("SentItems")
+  receivedInboxItems      InboxItem[]      @relation("ReceivedItems")
+  likes                   Like[]
+  posts                   Post[]           @relation("AuthoredPosts")
+  followedSellers         SellerFollow[]
+  likedSellers            SellerLike[]
+  savedSellers            SellerSave[]
+  enterprise              Enterprise?      @relation(fields: [enterpriseId], references: [id])
+  interests               UserInterests?
+}
+
+model UserInterests {
+  id          String   @id @default(uuid())
+  userId      String   @unique
+  industries  String[]
+  geographies String[]
+  valueChains String[]
+  offerings   String[]
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Connection {
+  id        String   @id @default(uuid())
+  fromId    String
+  toId      String
+  createdAt DateTime @default(now())
+  from      User     @relation("ConnectionFrom", fields: [fromId], references: [id], onDelete: Cascade)
+  to        User     @relation("ConnectionTo", fields: [toId], references: [id], onDelete: Cascade)
+
+  @@unique([fromId, toId])
+}
+
+model Enterprise {
+  id               String           @id @default(uuid())
+  companyName      String
+  address          String?
+  entityType       String?
+  gstNumber        String?
+  persona          Persona
+  subscriptionPlan SubscriptionPlan @default(Free)
+  associationCode  String           @unique
+  city             String?
+  country          String?
+  lat              Float?
+  lng              Float?
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+  sellers          Seller[]
+  members          User[]
+}
+
+model Seller {
+  id                  String              @id @default(uuid())
+  companyName         String
+  companyLogoUrl      String?
+  about               String?
+  platformScore       Float               @default(0)
+  subscriptionTier    SubscriptionTier    @default(Free)
+  platformCostLTV     Float               @default(0)
+  platformEngagement  Float               @default(0)
+  followers           Int                 @default(0)
+  isOpenForInvestment Boolean             @default(false)
+  city                String?
+  country             String?
+  lat                 Float?
+  lng                 Float?
+  clients             Int                 @default(0)
+  turnover            String?
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+  enterpriseId        String?
+  dueDiligence        Json?
+  events              Event[]
+  keyContacts         KeyContact[]
+  keyImpacts          KeyImpact[]
+  posts               Post[]
+  enterprise          Enterprise?         @relation(fields: [enterpriseId], references: [id])
+  customFields        SellerCustomField[]
+  followedBy          SellerFollow[]
+  likedBy             SellerLike[]
+  savedBy             SellerSave[]
+  solutions           Solution[]
+}
+
+model SellerFollow {
+  id        String   @id @default(uuid())
+  userId    String
+  sellerId  String
+  createdAt DateTime @default(now())
+  seller    Seller   @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, sellerId])
+}
+
+model SellerSave {
+  id        String   @id @default(uuid())
+  userId    String
+  sellerId  String
+  createdAt DateTime @default(now())
+  seller    Seller   @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, sellerId])
+}
+
+model SellerLike {
+  id        String   @id @default(uuid())
+  userId    String
+  sellerId  String
+  createdAt DateTime @default(now())
+  seller    Seller   @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, sellerId])
+}
+
+model KeyImpact {
+  id       String @id @default(uuid())
+  area     String
+  value    String
+  sellerId String
+  seller   Seller @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+}
+
+model KeyContact {
+  id         String  @id @default(uuid())
+  name       String
+  profileUrl String?
+  sellerId   String
+  seller     Seller  @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+}
+
+model SellerCustomField {
+  id              String  @id @default(uuid())
+  label           String
+  value           String
+  showOnIntroCard Boolean @default(false)
+  sellerId        String
+  seller          Seller  @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+}
+
+model Solution {
+  id                  String                @id @default(uuid())
+  name                String
+  shortDescription    String?
+  offering            String?
+  imageUrl            String?
+  isActive            Boolean               @default(true)
+  status              String                @default("active")
+  isSetupFeePaid      Boolean               @default(false)
+  revenueFromPlatform Float                 @default(0)
+  industries          String[]
+  valueChains         String[]
+  geographies         String[]
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime              @updatedAt
+  sellerId            String
+  caseStudies         CaseStudy[]
+  collaterals         Collateral[]
+  events              Event[]
+  posts               Post[]
+  seller              Seller                @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  customFields        SolutionCustomField[]
+  testimonials        Testimonial[]
+}
+
+model SolutionCustomField {
+  id         String   @id @default(uuid())
+  label      String
+  value      String
+  solutionId String
+  solution   Solution @relation(fields: [solutionId], references: [id], onDelete: Cascade)
+}
+
+model CaseStudy {
+  id                  String   @id @default(uuid())
+  clientName          String
+  clientNeed          String?
+  solutionApproach    String?
+  solutionDescription String?
+  implementationTime  String?
+  referenceAvailable  Boolean  @default(false)
+  isClientApproved    Boolean  @default(false)
+  solutionId          String
+  solution            Solution @relation(fields: [solutionId], references: [id], onDelete: Cascade)
+}
+
+model Testimonial {
+  id             String   @id @default(uuid())
+  customerName   String
+  quote          String
+  videoUrl       String?
+  quality        Int      @default(0)
+  time           Int      @default(0)
+  cost           Int      @default(0)
+  experience     Int      @default(0)
+  solutionImpact Int      @default(0)
+  solutionId     String
+  solution       Solution @relation(fields: [solutionId], references: [id], onDelete: Cascade)
+}
+
+model Collateral {
+  id         String   @id @default(uuid())
+  name       String
+  fileName   String
+  type       String
+  fileUrl    String?
+  solutionId String
+  solution   Solution @relation(fields: [solutionId], references: [id], onDelete: Cascade)
+}
+
+model Post {
+  id         String     @id @default(uuid())
+  title      String
+  content    String?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  authorId   String?
+  sellerId   String?
+  solutionId String?
+  bookmarks  Bookmark[]
+  comments   Comment[]
+  likes      Like[]
+  media      Media[]
+  author     User?      @relation("AuthoredPosts", fields: [authorId], references: [id])
+  seller     Seller?    @relation(fields: [sellerId], references: [id])
+  solution   Solution?  @relation(fields: [solutionId], references: [id])
+}
+
+model Media {
+  id     String    @id @default(uuid())
+  type   MediaType
+  url    String
+  postId String
+  post   Post      @relation(fields: [postId], references: [id], onDelete: Cascade)
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  content   String
+  createdAt DateTime @default(now())
+  userId    String
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Like {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  userId    String
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, postId])
+}
+
+model Bookmark {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  userId    String
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, postId])
+}
+
+model InboxItem {
+  id              String        @id @default(uuid())
+  category        InboxCategory
+  content         String?
+  status          InboxStatus   @default(Pending)
+  createdAt       DateTime      @default(now())
+  fromUserId      String
+  toUserId        String?
+  relatedSellerId String?
+  relatedPostId   String?
+  connectionRequestDetails String?
+  fromUser        User          @relation("SentItems", fields: [fromUserId], references: [id])
+  toUser          User?         @relation("ReceivedItems", fields: [toUserId], references: [id])
+}
+
+model Event {
+  id                   String    @id @default(uuid())
+  title                String
+  date                 String
+  endDate              String?
+  time                 String
+  venue                String
+  virtualLink          String?
+  geography            String[]
+  industry             String[]
+  valueChain           String[]
+  registrationLink     String?
+  speakingOpportunity  Boolean   @default(false)
+  speakingSlots        Int       @default(0)
+  delegateRegistration String?
+  delegateSlots        Int       @default(0)
+  isPublic             Boolean   @default(true)
+  programManagerId     String?
+  sellerId             String
+  solutionId           String?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  seller               Seller    @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  solution             Solution? @relation(fields: [solutionId], references: [id], onDelete: Cascade)
+}
+
+enum Persona {
+  Admin
+  Buyer
+  Seller
+  Investor
+  Collaborator
+  Browser
+}
+
+enum Role {
+  Admin
+  Member
+}
+
+enum SubscriptionPlan {
+  Free
+  Basic
+  Pro
+  Enterprise
+}
+
+enum SubscriptionTier {
+  Free
+  Basic
+  Premium
+}
+
+enum MediaType {
+  image
+  video
+  audio
+}
+
+enum InboxCategory {
+  MeetingRequest
+  SalesEnquiry
+  Engagement
+  CollaborationRequest
+  Message
+  ConnectionRequest
+}
+
+enum InboxStatus {
+  Pending
+  Actioned
+  Archived
+}

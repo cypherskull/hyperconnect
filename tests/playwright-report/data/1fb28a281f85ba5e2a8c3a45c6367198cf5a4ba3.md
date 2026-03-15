@@ -1,0 +1,228 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - button "Hyper Connect Connect. Collaborate. Create. New possibilities@Scale" [ref=e8] [cursor=pointer]:
+          - generic [ref=e9]: Hyper Connect
+          - generic [ref=e10]: Connect. Collaborate. Create. New possibilities@Scale
+        - generic [ref=e11]:
+          - button "Home" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+            - generic [ref=e15]: Home
+          - button "Favourites" [ref=e16] [cursor=pointer]:
+            - img [ref=e17]
+            - generic [ref=e19]: Favourites
+          - button "Inbox" [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+            - generic [ref=e23]: Inbox
+          - button "Network" [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - generic [ref=e27]: Network
+          - button "Toggle Theme" [ref=e28] [cursor=pointer]:
+            - img [ref=e29]
+            - generic [ref=e31]: Theme
+          - generic [ref=e34]: Seller
+          - button "Bob Seller" [ref=e36] [cursor=pointer]:
+            - img "Bob Seller" [ref=e37]
+    - main [ref=e38]:
+      - generic [ref=e39]:
+        - button "Back" [ref=e40] [cursor=pointer]:
+          - img [ref=e41]
+          - generic [ref=e43]: Back
+        - generic [ref=e45]:
+          - img "Innovate Solutions" [ref=e46]
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - heading "Innovate Solutions" [level=1] [ref=e49]
+              - generic [ref=e50]:
+                - img [ref=e51]
+                - text: Open for Investment
+            - generic [ref=e53]:
+              - generic [ref=e54]: Technology, Logistics
+              - generic [ref=e55]:
+                - img [ref=e56]
+                - generic [ref=e58]: 12,500
+                - generic [ref=e59]: followers
+            - paragraph [ref=e60]: Leading provider of AI-driven supply chain solutions.
+        - generic [ref=e61]:
+          - button "About" [ref=e62] [cursor=pointer]
+          - button "Posts (2)" [ref=e63] [cursor=pointer]
+          - button "Investment" [ref=e64] [cursor=pointer]
+          - button "Manage" [ref=e65] [cursor=pointer]
+          - button "Analytics" [ref=e66] [cursor=pointer]
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - heading "Content Management" [level=2] [ref=e70]
+            - button "Add New Solution" [active] [ref=e71] [cursor=pointer]:
+              - img [ref=e72]
+              - generic [ref=e74]: Add New Solution
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - heading "Open for Investment" [level=3] [ref=e78]
+              - paragraph [ref=e79]: Make your profile visible to investors and enable the investment dashboard.
+            - checkbox [checked] [ref=e81]
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - generic [ref=e85]:
+                - heading "AI-Powered Logistics" [level=3] [ref=e86]
+                - generic [ref=e87]: Active
+              - generic [ref=e88]:
+                - button "Put on Hold" [ref=e89] [cursor=pointer]
+                - button "Edit Solution" [ref=e90] [cursor=pointer]
+            - generic [ref=e91]:
+              - heading "Manage Solution Content" [level=2] [ref=e92]
+              - generic [ref=e93]:
+                - generic [ref=e94]:
+                  - button "Testimonials" [ref=e95] [cursor=pointer]
+                  - button "Collateral" [ref=e96] [cursor=pointer]
+                  - button "Case Studies" [ref=e97] [cursor=pointer]
+                  - button "Podcasts" [ref=e98] [cursor=pointer]
+                  - button "Events" [ref=e99] [cursor=pointer]
+                - generic [ref=e102]:
+                  - heading "Add New Testimonial" [level=3] [ref=e103]
+                  - textbox "Customer Name" [ref=e104]
+                  - textbox "Customer Quote" [ref=e105]
+                  - textbox "Video Citation URL (optional)" [ref=e106]
+                  - generic [ref=e107]:
+                    - generic [ref=e108]:
+                      - text: quality
+                      - generic [ref=e109]:
+                        - button [ref=e110] [cursor=pointer]:
+                          - img [ref=e111]
+                        - button [ref=e113] [cursor=pointer]:
+                          - img [ref=e114]
+                        - button [ref=e116] [cursor=pointer]:
+                          - img [ref=e117]
+                        - button [ref=e119] [cursor=pointer]:
+                          - img [ref=e120]
+                        - button [ref=e122] [cursor=pointer]:
+                          - img [ref=e123]
+                    - generic [ref=e125]:
+                      - text: time
+                      - generic [ref=e126]:
+                        - button [ref=e127] [cursor=pointer]:
+                          - img [ref=e128]
+                        - button [ref=e130] [cursor=pointer]:
+                          - img [ref=e131]
+                        - button [ref=e133] [cursor=pointer]:
+                          - img [ref=e134]
+                        - button [ref=e136] [cursor=pointer]:
+                          - img [ref=e137]
+                        - button [ref=e139] [cursor=pointer]:
+                          - img [ref=e140]
+                    - generic [ref=e142]:
+                      - text: cost
+                      - generic [ref=e143]:
+                        - button [ref=e144] [cursor=pointer]:
+                          - img [ref=e145]
+                        - button [ref=e147] [cursor=pointer]:
+                          - img [ref=e148]
+                        - button [ref=e150] [cursor=pointer]:
+                          - img [ref=e151]
+                        - button [ref=e153] [cursor=pointer]:
+                          - img [ref=e154]
+                        - button [ref=e156] [cursor=pointer]:
+                          - img [ref=e157]
+                    - generic [ref=e159]:
+                      - text: experience
+                      - generic [ref=e160]:
+                        - button [ref=e161] [cursor=pointer]:
+                          - img [ref=e162]
+                        - button [ref=e164] [cursor=pointer]:
+                          - img [ref=e165]
+                        - button [ref=e167] [cursor=pointer]:
+                          - img [ref=e168]
+                        - button [ref=e170] [cursor=pointer]:
+                          - img [ref=e171]
+                        - button [ref=e173] [cursor=pointer]:
+                          - img [ref=e174]
+                    - generic [ref=e176]:
+                      - text: solution Impact
+                      - generic [ref=e177]:
+                        - button [ref=e178] [cursor=pointer]:
+                          - img [ref=e179]
+                        - button [ref=e181] [cursor=pointer]:
+                          - img [ref=e182]
+                        - button [ref=e184] [cursor=pointer]:
+                          - img [ref=e185]
+                        - button [ref=e187] [cursor=pointer]:
+                          - img [ref=e188]
+                        - button [ref=e190] [cursor=pointer]:
+                          - img [ref=e191]
+                  - button "Add Testimonial" [ref=e193] [cursor=pointer]:
+                    - img [ref=e194]
+                    - generic [ref=e196]: Add Testimonial
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - heading "Add New Solution" [level=2] [ref=e200]
+              - button [ref=e201] [cursor=pointer]:
+                - img [ref=e202]
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - generic [ref=e206]: Solution Name
+                - textbox [ref=e207]
+              - generic [ref=e208]:
+                - generic [ref=e209]: Short Description
+                - generic [ref=e210]:
+                  - generic [ref=e211]:
+                    - button "B" [ref=e212] [cursor=pointer]
+                    - button "I" [ref=e213] [cursor=pointer]
+                    - button "List" [ref=e214] [cursor=pointer]
+                  - textbox [ref=e215]
+              - generic [ref=e216]:
+                - generic [ref=e217]:
+                  - generic [ref=e218]: Offering
+                  - textbox [ref=e219]
+                - generic [ref=e220]:
+                  - generic [ref=e221]: Revenue from Platform (₹)
+                  - spinbutton [ref=e222]: "0"
+              - generic [ref=e223]:
+                - generic [ref=e224]:
+                  - generic [ref=e225]: Industry
+                  - button "Select... (0/3)" [ref=e227] [cursor=pointer]:
+                    - generic [ref=e228]: Select... (0/3)
+                    - img [ref=e229]
+                - generic [ref=e232]:
+                  - generic [ref=e233]: Value Chain
+                  - button "Select... (0/3)" [ref=e235] [cursor=pointer]:
+                    - generic [ref=e236]: Select... (0/3)
+                    - img [ref=e237]
+                - generic [ref=e240]:
+                  - generic [ref=e241]: Geography
+                  - button "Select... (0/3)" [ref=e243] [cursor=pointer]:
+                    - generic [ref=e244]: Select... (0/3)
+                    - img [ref=e245]
+              - generic [ref=e248]:
+                - heading "Custom Solution Fields (0/10)" [level=3] [ref=e249]
+                - button "Add Custom Field" [ref=e250] [cursor=pointer]:
+                  - img [ref=e251]
+                  - generic [ref=e253]: Add Custom Field
+              - button "Save Solution" [ref=e255] [cursor=pointer]
+    - generic [ref=e257]:
+      - button "Filter by My View" [ref=e258] [cursor=pointer]:
+        - img [ref=e259]
+        - generic [ref=e261]: My Fav
+      - button "Filter by Value Chain" [ref=e262] [cursor=pointer]:
+        - img [ref=e263]
+        - generic [ref=e265]: ValueChain
+        - generic [ref=e266]: "2"
+      - button "Filter by Geography" [ref=e267] [cursor=pointer]:
+        - img [ref=e268]
+        - generic [ref=e270]: Geo
+        - generic [ref=e271]: "3"
+      - button "Filter by Industry" [ref=e272] [cursor=pointer]:
+        - img [ref=e273]
+        - generic [ref=e275]: Industry
+        - generic [ref=e276]: "2"
+      - button "Filter by Offering" [ref=e277] [cursor=pointer]:
+        - img [ref=e278]
+        - generic [ref=e280]: Offering
+        - generic [ref=e281]: "1"
+      - button "Reset all filters" [ref=e282] [cursor=pointer]:
+        - img [ref=e283]
+        - generic [ref=e285]: Reset
+  - img
+```

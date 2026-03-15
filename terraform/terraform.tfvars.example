@@ -1,0 +1,27 @@
+# Terraform Variables Example
+# Copy this file to terraform.tfvars and fill in the values
+
+# AWS Configuration
+aws_region  = "us-east-1"
+environment = "production"
+project_name = "hyperconnect"
+
+# VPC
+vpc_cidr = "10.0.0.0/16"
+
+# RDS (Free Tier)
+db_instance_class    = "db.t3.micro"
+db_allocated_storage = 20
+db_name              = "hyperconnect"
+db_username          = "postgres"
+db_password          = "CHANGE_THIS_PASSWORD"  # Use strong password!
+
+# App Runner (Free Tier - first 3 months)
+app_runner_cpu    = "0.25 vCPU"
+app_runner_memory = "0.5 GB"
+
+# Authentication
+jwt_secret = "CHANGE_THIS_TO_SECURE_SECRET_KEY"
+
+# ECR Repository (leave empty to use code-based deployment)
+ecr_repository_url = ""

@@ -1,0 +1,720 @@
+import React, { createContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
+import { AccessConfig, Enterprise, InboxItem, MonetizationRule, Persona, Post, Seller, Solution, Testimonial, User, MeetingDetails, SharedContent, View, ScopeFilter, DueDiligenceData, Comment, PaymentMethod, ProfileTab, PlatformSettings } from '../types';
+import * as api from '../services/apiService';
+import * as auth from '../services/authService';
+
+// Define the shape of the context state
+interface AppContextState {
+    // UI State
+    view: View;
+    viewHistory: View[];
+    scopeFilter: ScopeFilter;
+    interestFilters: User['interests'];
+
+    // Modal State
+    selectedSeller: { seller: Seller, solutionId?: string, tab?: ProfileTab, postId?: string } | null;
+    isPostCreatorOpen: boolean;
+    postCreatorData: { solution: Solution, shareItem?: SharedContent, postToEdit?: Post | null } | null;
+    commentingPost: Post | null;
+    testimonialModalSeller: Seller | null;
+    messagingSeller: Seller | null;
+    meetingSeller: Seller | null;
+    respondingToItem: InboxItem | null;
+    impersonatingUser: User | null; // Admin feature
+
+    // Data
+    allUsers: User[];
+    allSellers: Seller[];
+    allPosts: Post[];
+    allEnterprises: Enterprise[];
+    inboxItems: InboxItem[];
+    monetizationRules: MonetizationRule[];
+    platformSettings: PlatformSettings | null;
+
+    // Config
+    currentPersona: Persona;
+    currentUser: User | null; // The logged-in user
+    accessConfig: AccessConfig;
+
+    // Setters
+    setView: (view: View) => void;
+    setScopeFilter: (scope: ScopeFilter) => void;
+    setInterestFilters: (filters: User['interests']) => void;
+    setSelectedSeller: (data: { seller: Seller, solutionId?: string, tab?: ProfileTab, postId?: string } | null) => void;
+    setIsPostCreatorOpen: (isOpen: boolean) => void;
+    setPostCreatorData: (data: any) => void;
+    setCommentingPost: (post: Post | null) => void;
+    setTestimonialModalSeller: (seller: Seller | null) => void;
+    setMessagingSeller: (seller: Seller | null) => void;
+    setMeetingSeller: (seller: Seller | null) => void;
+    setRespondingToItem: (item: InboxItem | null) => void;
+    setImpersonatingUser: (user: User | null) => void;
+    setAccessConfig: React.Dispatch<React.SetStateAction<AccessConfig>>;
+}
+
+interface AppContextActions {
+    handleLogin: (email: string, password: string) => boolean;
+    handleSignUp: (user: Omit<User, 'id'>) => void;
+    handleLogout: () => void;
+    handleNavigate: (view: View) => void;
+    handleBack: () => void;
+    handleChangePersona: (persona: Persona) => void;
+    handleApplyFilters: (filters: User['interests'], scope: ScopeFilter) => void;
+
+    // Interactions
+    handleSelectSeller: (seller: Seller, options?: { solutionId?: string, tab?: ProfileTab, postId?: string }) => void;
+    handleLikePost: (postId: string) => void;
+    handleBookmarkPostToggle: (postId: string) => void;
+    handleSendConnectionRequest: (entityId: string) => void;
+    handleConnectionRequestResponse: (itemId: string, response: 'Accepted' | 'Declined') => void;
+    handleUpdateUser: (updatedUser: User) => void;
+    handleFollowSeller: (sellerId: string) => void;
+    handleLikeSellerToggle: (sellerId: string) => void;
+
+    // Content Creation
+    handleOpenPostCreator: (solution: Solution, shareItem?: SharedContent, postToEdit?: Post | null) => void;
+    handleSavePost: (postData: any) => void;
+    handleAddComment: (commentText: string) => void;
+    handleAddTestimonial: (solutionId: string, testimonial: Testimonial) => void;
+    handleSendResponse: (originalItem: InboxItem, responseText: string, attachments: SharedContent[], meetingDetails?: MeetingDetails) => void;
+
+    // Enterprise & Monetization
+    handleCreateEnterprise: (enterprise: Omit<Enterprise, 'id' | 'associationCode' | 'members'>, admin: Omit<User, 'id'>) => void;
+    handleRequestToJoinEnterprise: (associationCode: string) => void;
+    handleAcceptInvite: (user: User) => void;
+    handleDeclineInvite: (user: User) => void;
+    handleInviteToEnterprise: (email: string, enterprise: Enterprise) => void;
+    handleUpdateEnterpriseUser: (userId: string, updates: Partial<User>) => void;
+    handleRemoveFromEnterprise: (userId: string, enterpriseId: string) => void;
+    handleApproveJoin: (userId: string, enterpriseId: string) => void;
+    handleDenyJoin: (userId: string, enterpriseId: string) => void;
+    handleClaimMonthlyEarnings: (userId: string) => void;
+
+    // Admin
+    handleAddMonetizationRule: (rule: Omit<MonetizationRule, 'id'>) => void;
+    handleUpdateMonetizationRule: (rule: MonetizationRule) => void;
+    handleDeleteMonetizationRule: (ruleId: string) => void;
+    handleUpdateSellerTier: (sellerId: string, tier: 'Free' | 'Basic' | 'Premium') => void;
+    handleUpdatePlatformSettings: (settings: PlatformSettings) => void;
+
+    // Billing
+    handleAddPaymentMethod: (userId: string, method: Omit<PaymentMethod, 'id'>) => void;
+    handleRemovePaymentMethod: (userId: string, methodId: string) => void;
+    handleSetPreferredPaymentMethod: (userId: string, methodId: string) => void;
+    handlePayDues: () => void;
+    handleSimulateBilling: () => void;
+
+    // Seller specific
+    handleUpdateSolutions: (solutions: Solution[]) => void;
+    handleActivateSolution: (solutionId: string) => void;
+    handleSetSolutionHold: (solutionId: string, startDate: string, endDate: string) => void;
+    handleCancelSolutionHold: (solutionId: string) => void;
+    handleToggleInvestmentStatus: (sellerId: string, status: boolean) => void;
+    handleUpdateDueDiligence: (sellerId: string, data: DueDiligenceData) => void;
+}
+
+interface AppContextValue {
+    state: AppContextState;
+    effectiveUser: User | null;
+    personasForCurrentUser: Persona[];
+    filteredSellers: Seller[];
+    filteredPosts: Post[];
+    userAccessConfig: Record<string, boolean>;
+    currentUserSellerProfile: Seller | null;
+
+    // Actions
+    handleLogin: AppContextActions['handleLogin'];
+    handleSignUp: AppContextActions['handleSignUp'];
+    handleLogout: AppContextActions['handleLogout'];
+    handleNavigate: AppContextActions['handleNavigate'];
+    handleBack: AppContextActions['handleBack'];
+    handleChangePersona: AppContextActions['handleChangePersona'];
+    handleApplyFilters: AppContextActions['handleApplyFilters'];
+    handleSelectSeller: AppContextActions['handleSelectSeller'];
+    handleLikePost: AppContextActions['handleLikePost'];
+    handleBookmarkPostToggle: AppContextActions['handleBookmarkPostToggle'];
+    handleSendConnectionRequest: AppContextActions['handleSendConnectionRequest'];
+    handleConnectionRequestResponse: AppContextActions['handleConnectionRequestResponse'];
+    handleUpdateUser: AppContextActions['handleUpdateUser'];
+    handleFollowSeller: AppContextActions['handleFollowSeller'];
+    handleLikeSellerToggle: AppContextActions['handleLikeSellerToggle'];
+    handleOpenPostCreator: AppContextActions['handleOpenPostCreator'];
+    handleSavePost: AppContextActions['handleSavePost'];
+    handleAddComment: AppContextActions['handleAddComment'];
+    handleAddTestimonial: AppContextActions['handleAddTestimonial'];
+    handleSendResponse: AppContextActions['handleSendResponse'];
+    handleCreateEnterprise: AppContextActions['handleCreateEnterprise'];
+    handleRequestToJoinEnterprise: AppContextActions['handleRequestToJoinEnterprise'];
+    handleAcceptInvite: AppContextActions['handleAcceptInvite'];
+    handleDeclineInvite: AppContextActions['handleDeclineInvite'];
+    handleInviteToEnterprise: AppContextActions['handleInviteToEnterprise'];
+    handleUpdateEnterpriseUser: AppContextActions['handleUpdateEnterpriseUser'];
+    handleRemoveFromEnterprise: AppContextActions['handleRemoveFromEnterprise'];
+    handleApproveJoin: AppContextActions['handleApproveJoin'];
+    handleDenyJoin: AppContextActions['handleDenyJoin'];
+    handleClaimMonthlyEarnings: AppContextActions['handleClaimMonthlyEarnings'];
+    handleAddMonetizationRule: AppContextActions['handleAddMonetizationRule'];
+    handleUpdateMonetizationRule: AppContextActions['handleUpdateMonetizationRule'];
+    handleDeleteMonetizationRule: AppContextActions['handleDeleteMonetizationRule'];
+    handleUpdatePlatformSettings: AppContextActions['handleUpdatePlatformSettings'];
+    handleAddPaymentMethod: AppContextActions['handleAddPaymentMethod'];
+    handleRemovePaymentMethod: AppContextActions['handleRemovePaymentMethod'];
+    handleSetPreferredPaymentMethod: AppContextActions['handleSetPreferredPaymentMethod'];
+    handlePayDues: AppContextActions['handlePayDues'];
+    handleSimulateBilling: AppContextActions['handleSimulateBilling'];
+    handleUpdateSellerTier: AppContextActions['handleUpdateSellerTier'];
+    handleUpdateSolutions: AppContextActions['handleUpdateSolutions'];
+    handleActivateSolution: AppContextActions['handleActivateSolution'];
+    handleSetSolutionHold: AppContextActions['handleSetSolutionHold'];
+    handleCancelSolutionHold: AppContextActions['handleCancelSolutionHold'];
+    handleToggleInvestmentStatus: AppContextActions['handleToggleInvestmentStatus'];
+    handleUpdateDueDiligence: AppContextActions['handleUpdateDueDiligence'];
+}
+
+export const AppContext = createContext<AppContextValue | undefined>(undefined);
+
+export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+    // --- STATE ---
+    const [currentUser, setCurrentUser] = useState<User | null>(null);
+    const [impersonatingUser, setImpersonatingUser] = useState<User | null>(null);
+    const [currentPersona, setCurrentPersona] = useState<Persona>('Browser');
+    const [allUsers, setAllUsers] = useState<User[]>([]);
+    const [allSellers, setAllSellers] = useState<Seller[]>([]);
+    const [allPosts, setAllPosts] = useState<Post[]>([]);
+    const [allEnterprises, setAllEnterprises] = useState<Enterprise[]>([]);
+    const [inboxItems, setInboxItems] = useState<InboxItem[]>([]);
+    const [accessConfig, setAccessConfig] = useState<AccessConfig>({} as AccessConfig);
+    const [monetizationRules, setMonetizationRules] = useState<MonetizationRule[]>([]);
+    const [platformSettings, setPlatformSettings] = useState<PlatformSettings | null>(null);
+
+    // UI State
+    const [view, setView] = useState<View>('feed');
+    const [viewHistory, setViewHistory] = useState<View[]>(['feed']);
+    const [scopeFilter, setScopeFilter] = useState<ScopeFilter>('all');
+    const [interestFilters, setInterestFilters] = useState<User['interests']>({ valueChain: [], geography: [], industry: [], offering: [] });
+
+    // Modals
+    const [selectedSeller, setSelectedSeller] = useState<{ seller: Seller, solutionId?: string, tab?: ProfileTab, postId?: string } | null>(null);
+    const [isPostCreatorOpen, setIsPostCreatorOpen] = useState(false);
+    const [postCreatorData, setPostCreatorData] = useState<{ solution: Solution, shareItem?: SharedContent, postToEdit?: Post | null } | null>(null);
+    const [commentingPost, setCommentingPost] = useState<Post | null>(null);
+    const [testimonialModalSeller, setTestimonialModalSeller] = useState<Seller | null>(null);
+    const [messagingSeller, setMessagingSeller] = useState<Seller | null>(null);
+    const [meetingSeller, setMeetingSeller] = useState<Seller | null>(null);
+    const [respondingToItem, setRespondingToItem] = useState<InboxItem | null>(null);
+
+    // --- DERIVED STATE ---
+    const effectiveUser = impersonatingUser || currentUser;
+    const token = auth.getToken() || ''; // Simplification: assuming token handling via authService
+
+    // Fetch initial data
+    useEffect(() => {
+        const init = async () => {
+            const storedToken = auth.getToken();
+            if (storedToken) {
+                try {
+                    const user = await auth.validateToken(storedToken);
+                    setCurrentUser(user);
+                    setCurrentPersona(user.persona);
+
+                    const data = await api.getInitialData(storedToken);
+                    setAllUsers(data.users);
+                    setAllSellers(data.sellers);
+                    setAllPosts(data.posts);
+                    setAllEnterprises(data.enterprises);
+                    setInboxItems(data.inboxItems);
+                    setAccessConfig(data.accessConfig);
+                    setMonetizationRules(data.monetizationRules);
+                    setPlatformSettings(data.platformSettings);
+                } catch (error) {
+                    console.error("Session invalid", error);
+                    auth.removeToken();
+                }
+            }
+        };
+        init();
+    }, []);
+
+    // --- HELPERS ---
+    const refreshData = useCallback(async () => {
+        if (token) {
+            const data = await api.getInitialData(token);
+            setAllUsers(data.users);
+            setAllSellers(data.sellers);
+            setAllPosts(data.posts);
+            setAllEnterprises(data.enterprises);
+            setInboxItems(data.inboxItems);
+        }
+    }, [token]);
+
+    // --- ACTIONS ---
+
+    const handleLogin = useCallback((email: string, password: string) => {
+        auth.login(email, password).then(({ user, token }) => {
+            auth.setToken(token);
+            setCurrentUser(user);
+            setCurrentPersona(user.persona);
+            refreshData(); // Load data after login
+        }).catch(err => {
+            console.error(err);
+            alert("Login failed");
+        });
+        return true; // Optimistic return for now, refined later
+    }, [refreshData]);
+
+    const handleSignUp = useCallback(async (userData: Omit<User, 'id'>) => {
+        try {
+            const { user, token } = await auth.signUp(userData);
+            auth.setToken(token);
+            setCurrentUser(user);
+            setCurrentPersona(user.persona);
+            refreshData();
+        } catch (e) {
+            console.error(e);
+            alert("Signup failed");
+        }
+    }, [refreshData]);
+
+    const handleCreateEnterprise = useCallback(async (enterpriseData: Omit<Enterprise, 'id' | 'associationCode' | 'members'>, adminData: Omit<User, 'id'>) => {
+        try {
+            const { user, token } = await auth.createEnterpriseAndAdmin(enterpriseData, adminData);
+            auth.setToken(token);
+            setCurrentUser(user);
+            setCurrentPersona(user.persona);
+            refreshData();
+        } catch (e) {
+            console.error(e);
+            alert("Enterprise creation failed");
+        }
+    }, [refreshData]);
+
+    const handleLogout = useCallback(() => {
+        auth.logout();
+        setCurrentUser(null);
+        setImpersonatingUser(null);
+        setView('feed');
+    }, []);
+
+    const handleNavigate = useCallback((newView: View) => {
+        if (view !== newView) {
+            setViewHistory(prev => [...prev, newView]);
+            setView(newView);
+        }
+    }, [view]);
+
+    const handleBack = useCallback(() => {
+        if (viewHistory.length > 1) {
+            const newHistory = [...viewHistory];
+            newHistory.pop(); // Remove current
+            const prevView = newHistory[newHistory.length - 1];
+            setViewHistory(newHistory);
+            setView(prevView);
+        } else {
+            setView('feed');
+        }
+        setSelectedSeller(null);
+    }, [viewHistory]);
+
+    const handleChangePersona = useCallback((persona: Persona) => {
+        setCurrentPersona(persona);
+    }, []);
+
+    const handleApplyFilters = useCallback((filters: User['interests'], scope: ScopeFilter) => {
+        setInterestFilters(filters);
+        setScopeFilter(scope);
+    }, []);
+
+    // --- INTERACTION HANDLERS ---
+
+    const handleSelectSeller = useCallback((seller: Seller, options?: { solutionId?: string, tab?: ProfileTab, postId?: string }) => {
+        setSelectedSeller({ seller, ...options });
+        handleNavigate('sellerProfile');
+    }, [handleNavigate]);
+
+    const handleLikePost = useCallback(async (postId: string) => {
+        if (!effectiveUser) return;
+        // Optimistic update
+        setAllPosts(prev => prev.map(p => {
+            if (p.id === postId) {
+                const isLiked = !p.isLiked;
+                return { ...p, isLiked, likes: isLiked ? p.likes + 1 : p.likes - 1 };
+            }
+            return p;
+        }));
+        try {
+            // Fix: Replaced impersonatedUserId with correct state variable impersonatingUser
+            await api.toggleLikePost(token, postId, impersonatingUser?.id);
+        } catch (e) {
+            console.error(e);
+            refreshData(); // Revert on error
+        }
+    }, [effectiveUser, token, impersonatingUser, refreshData]);
+
+    const handleBookmarkPostToggle = useCallback(async (postId: string) => {
+        if (!effectiveUser) return;
+        setAllPosts(prev => prev.map(p => {
+            if (p.id === postId) {
+                const isBookmarked = !p.isBookmarked;
+                return { ...p, isBookmarked, bookmarks: isBookmarked ? p.bookmarks + 1 : p.bookmarks - 1 };
+            }
+            return p;
+        }));
+        try {
+            // Fix: Replaced impersonatedUserId with correct state variable impersonatingUser
+            await api.toggleBookmarkPost(token, postId, impersonatingUser?.id);
+        } catch (e) {
+            console.error(e);
+            refreshData();
+        }
+    }, [effectiveUser, token, impersonatingUser, refreshData]);
+
+    const handleAddComment = useCallback(async (commentText: string) => {
+        if (!effectiveUser || !commentingPost) return;
+        try {
+            // Fix: Replaced impersonatedUserId with correct state variable impersonatingUser
+            const newComment = await api.addComment(token, commentingPost.id, commentText, impersonatingUser?.id);
+            setAllPosts(prev => prev.map(p => {
+                if (p.id === commentingPost.id) {
+                    return { ...p, comments: [...p.comments, newComment] };
+                }
+                return p;
+            }));
+            setCommentingPost(null); // Close modal
+        } catch (e) {
+            console.error(e);
+            alert("Failed to post comment");
+        }
+        // Fix: Updated dependency array to use impersonatingUser instead of impersonatedUserId
+    }, [effectiveUser, commentingPost, token, impersonatingUser]);
+
+    const handleSendConnectionRequest = useCallback(async (entityId: string) => {
+        if (!effectiveUser) return;
+        // Check if already pending to avoid dupes (though API handles it, UI should be snappy)
+        const exists = inboxItems.find(i =>
+            i.category === 'Connection Request' &&
+            i.fromUser.id === effectiveUser.id &&
+            (i.relatedSellerId === entityId || i.relatedUserId === entityId)
+        );
+        if (exists) return;
+
+        try {
+            const newItem = await api.sendConnectionRequest(token, entityId);
+            // Add to local inbox state for immediate feedback if we were viewing sent items (though inbox mainly shows received)
+            // More importantly, components checking for 'pending' status will now find this item.
+            setInboxItems(prev => [newItem, ...prev]);
+            alert("Connection request sent!");
+        } catch (e) {
+            console.error(e);
+            alert("Failed to send connection request");
+        }
+    }, [effectiveUser, inboxItems, token]);
+
+    const handleConnectionRequestResponse = useCallback(async (itemId: string, response: 'Accepted' | 'Declined') => {
+        try {
+            await api.respondToConnectionRequest(token, itemId, response, impersonatingUser?.id);
+
+            // Update local state for the inbox item
+            setInboxItems(prev => prev.map(item =>
+                item.id === itemId ? { ...item, status: 'Actioned' as const, connectionRequestDetails: response } : item
+            ));
+
+            // If accepted, we need to update the current user's connections list locally to reflect immediately
+            if (response === 'Accepted' && effectiveUser) {
+                const item = inboxItems.find(i => i.id === itemId);
+                if (item) {
+                    // Logic: If I accepted a request from User A, User A is now in my connections.
+                    // The item.fromUser.id is the ID of the person who sent the request.
+                    const newConnectionId = item.fromUser.id;
+
+                    const updatedUser = {
+                        ...effectiveUser,
+                        connections: [...(effectiveUser.connections || []), newConnectionId]
+                    };
+
+                    // Update currentUser or impersonatingUser based on context
+                    if (impersonatingUser) {
+                        setImpersonatingUser(updatedUser);
+                    } else {
+                        setCurrentUser(updatedUser);
+                    }
+
+                    // IMPORTANT: In a mock environment, we also want to update the OTHER user (the sender)
+                    // so that if we check the network graph, the link is bidirectional immediately.
+                    // This mimics a real-time update or data fetch that would happen in a real app.
+                    setAllUsers(prev => prev.map(u => {
+                        if (u.id === updatedUser.id) return updatedUser;
+                        if (u.id === newConnectionId) {
+                            // Update the sender to include the receiver (current user)
+                            return { ...u, connections: [...(u.connections || []), updatedUser.id] };
+                        }
+                        return u;
+                    }));
+                }
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Failed to respond to request");
+        }
+    }, [token, impersonatingUser, effectiveUser, inboxItems]);
+
+    const handleFollowSeller = useCallback(async (sellerId: string) => {
+        if (!effectiveUser) return;
+        try {
+            // Fix: Replaced impersonatedUserId with correct state variable impersonatingUser
+            const { user, seller } = await api.toggleFollowSeller(token, sellerId, impersonatingUser?.id);
+            // Update user state
+            if (impersonatingUser) setImpersonatingUser(user);
+            else setCurrentUser(user);
+            // Update seller state in the main list
+            setAllSellers(prev => prev.map(s => s.id === seller.id ? seller : s));
+        } catch (e) {
+            console.error(e);
+        }
+    }, [effectiveUser, token, impersonatingUser]);
+
+    const handleLikeSellerToggle = useCallback(async (sellerId: string) => {
+        // Mocking this as it's similar to follow but for 'likedSellers' list
+        if (!effectiveUser) return;
+        const isLiked = effectiveUser.likedSellers?.includes(sellerId);
+        const newLikedList = isLiked
+            ? effectiveUser.likedSellers?.filter(id => id !== sellerId)
+            : [...(effectiveUser.likedSellers || []), sellerId];
+
+        const updatedUser = { ...effectiveUser, likedSellers: newLikedList };
+        if (impersonatingUser) setImpersonatingUser(updatedUser);
+        else setCurrentUser(updatedUser);
+
+        // Ideally call API here
+    }, [effectiveUser, impersonatingUser]);
+
+    // --- CONTENT MANAGEMENT ---
+
+    const handleOpenPostCreator = useCallback((solution: Solution, shareItem?: SharedContent, postToEdit?: Post | null) => {
+        setPostCreatorData({ solution, shareItem, postToEdit });
+        setIsPostCreatorOpen(true);
+    }, []);
+
+    const handleSavePost = useCallback(async (postData: any) => {
+        if (!effectiveUser) return;
+        try {
+            // Fix: Replaced impersonatedUserId with correct state variable impersonatingUser
+            const savedPost = await api.savePost(token, postData, impersonatingUser?.id);
+            if (postData.id) {
+                setAllPosts(prev => prev.map(p => p.id === postData.id ? savedPost : p));
+            } else {
+                setAllPosts(prev => [savedPost, ...prev]);
+            }
+            setIsPostCreatorOpen(false);
+            setPostCreatorData(null);
+        } catch (e) {
+            console.error(e);
+            alert("Failed to save post");
+        }
+    }, [effectiveUser, token, impersonatingUser]);
+
+    const handleAddTestimonial = useCallback(async (solutionId: string, testimonial: Testimonial) => {
+        if (!testimonialModalSeller) return;
+        try {
+            await api.addTestimonial(token, solutionId, testimonialModalSeller.id, testimonial);
+            // Update local state
+            setAllSellers(prev => prev.map(s => {
+                if (s.id === testimonialModalSeller.id) {
+                    return {
+                        ...s,
+                        solutions: s.solutions.map(sol => {
+                            if (sol.id === solutionId) {
+                                return { ...sol, testimonials: [...sol.testimonials, testimonial] };
+                            }
+                            return sol;
+                        })
+                    };
+                }
+                return s;
+            }));
+            setTestimonialModalSeller(null);
+        } catch (e) {
+            console.error(e);
+            alert("Failed to add testimonial");
+        }
+    }, [testimonialModalSeller, token]);
+
+    const handleSendResponse = useCallback((originalItem: InboxItem, responseText: string, attachments: SharedContent[], meetingDetails?: MeetingDetails) => {
+        // Mock sending logic
+        console.log("Sending response:", { originalItem, responseText, attachments, meetingDetails });
+        setInboxItems(prev => prev.map(i => i.id === originalItem.id ? { ...i, status: 'Actioned' as const } : i));
+        setRespondingToItem(null);
+        alert("Response sent!");
+    }, []);
+
+    // --- USER MANAGEMENT ---
+    const handleUpdateUser = useCallback(async (updatedUser: User) => {
+        try {
+            const result = await api.updateUser(token, updatedUser);
+            if (impersonatingUser && impersonatingUser.id === result.id) {
+                setImpersonatingUser(result);
+            } else if (currentUser?.id === result.id) {
+                setCurrentUser(result);
+            }
+            setAllUsers(prev => prev.map(u => u.id === result.id ? result : u));
+        } catch (e) {
+            console.error(e);
+            alert("Failed to update user");
+        }
+    }, [token, currentUser, impersonatingUser]);
+
+    const handleUpdateSellerTier = useCallback(async (sellerId: string, tier: 'Free' | 'Basic' | 'Premium') => {
+        try {
+            const updatedSeller = await api.updateSellerTier(token, sellerId, tier);
+            setAllSellers(prev => prev.map(s => s.id === sellerId ? updatedSeller : s));
+        } catch (e) {
+            console.error(e);
+        }
+    }, [token]);
+
+    const handleUpdatePlatformSettings = useCallback(async (settings: PlatformSettings) => {
+        try {
+            const result = await api.updatePlatformSettings(token, settings);
+            setPlatformSettings(result);
+            alert("Platform settings updated successfully!");
+        } catch (e) {
+            console.error(e);
+            alert("Failed to update platform settings");
+        }
+    }, [token]);
+
+    // --- MONETIZATION & ENTERPRISE (Simplified Mocks) ---
+
+    const handleRequestToJoinEnterprise = (code: string) => alert(`Request to join enterprise with code ${code} sent.`);
+    const handleAcceptInvite = (user: User) => {
+        alert("Invite accepted!");
+        // Update user to remove invite and add enterprise ID locally
+        if (currentUser) handleUpdateUser({ ...currentUser, enterpriseInvite: undefined, enterpriseId: user.enterpriseInvite?.enterpriseId });
+    };
+    const handleDeclineInvite = (user: User) => {
+        if (currentUser) handleUpdateUser({ ...currentUser, enterpriseInvite: undefined });
+    };
+    const handleInviteToEnterprise = (email: string) => alert(`Invite sent to ${email}`);
+    const handleUpdateEnterpriseUser = (id: string, updates: any) => alert(`User ${id} updated`);
+    const handleRemoveFromEnterprise = (uid: string, eid: string) => alert(`User ${uid} removed`);
+    const handleApproveJoin = (uid: string) => alert(`User ${uid} approved`);
+    const handleDenyJoin = (uid: string) => alert(`User ${uid} denied`);
+    const handleClaimMonthlyEarnings = (uid: string) => alert(`Earnings claimed for ${uid}`);
+    const handleAddMonetizationRule = (rule: any) => setMonetizationRules(prev => [...prev, { ...rule, id: Date.now().toString() }]);
+    const handleUpdateMonetizationRule = (rule: MonetizationRule) => setMonetizationRules(prev => prev.map(r => r.id === rule.id ? rule : r));
+    const handleDeleteMonetizationRule = (id: string) => setMonetizationRules(prev => prev.filter(r => r.id !== id));
+    const handleAddPaymentMethod = (uid: string, method: any) => {
+        if (effectiveUser) {
+            const newMethod = { ...method, id: `pm-${Date.now()}` };
+            handleUpdateUser({ ...effectiveUser, paymentMethods: [...(effectiveUser.paymentMethods || []), newMethod] });
+        }
+    };
+    const handleRemovePaymentMethod = (uid: string, mid: string) => {
+        if (effectiveUser) {
+            handleUpdateUser({ ...effectiveUser, paymentMethods: effectiveUser.paymentMethods?.filter(m => m.id !== mid) });
+        }
+    };
+    const handleSetPreferredPaymentMethod = (uid: string, mid: string) => {
+        if (effectiveUser) handleUpdateUser({ ...effectiveUser, preferredPaymentMethodId: mid });
+    };
+    const handlePayDues = () => {
+        if (effectiveUser && effectiveUser.transactionHistory) {
+            const updatedHistory = effectiveUser.transactionHistory.map(t => ({ ...t, status: 'paid' as const }));
+            handleUpdateUser({ ...effectiveUser, transactionHistory: updatedHistory, isDormant: false });
+            alert("Dues paid successfully!");
+        }
+    };
+    const handleSimulateBilling = () => alert("Billing simulated. In a real app, this would run backend jobs.");
+
+    const handleUpdateSolutions = (solutions: Solution[]) => {
+        if (!currentUserSellerProfile) return;
+        // In a real app, save via API
+        const updatedSeller = { ...currentUserSellerProfile, solutions };
+        setAllSellers(prev => prev.map(s => s.id === updatedSeller.id ? updatedSeller : s));
+    };
+    const handleActivateSolution = (sid: string) => alert(`Solution ${sid} activated.`);
+    const handleSetSolutionHold = (sid: string, start: string, end: string) => alert(`Solution ${sid} on hold from ${start} to ${end}.`);
+    const handleCancelSolutionHold = (sid: string) => alert(`Hold cancelled for ${sid}.`);
+    const handleToggleInvestmentStatus = async (sellerId: string, status: boolean) => {
+        try {
+            const updatedSeller = await api.toggleInvestmentStatus(token, sellerId, status);
+            setAllSellers(prev => prev.map(s => s.id === sellerId ? updatedSeller : s));
+        } catch (e) { console.error(e); }
+    };
+    const handleUpdateDueDiligence = async (sellerId: string, data: DueDiligenceData) => {
+        try {
+            const updatedSeller = await api.updateDueDiligence(token, sellerId, data);
+            setAllSellers(prev => prev.map(s => s.id === sellerId ? updatedSeller : s));
+        } catch (e) { console.error(e); }
+    };
+
+
+    // --- FILTERING ---
+    const filteredSellers = useMemo(() => {
+        // Basic filtering based on interestFilters
+        return allSellers.filter(seller => {
+            if (scopeFilter === 'favourites' && !effectiveUser?.followedSellers?.includes(seller.id)) return false;
+            if (scopeFilter === 'connections' && !effectiveUser?.connections?.includes(seller.id)) return false;
+            if (scopeFilter === 'invstScan' && !seller.isOpenForInvestment) return false;
+
+            // If no interest filters set, show all (within scope)
+            if (!interestFilters.valueChain?.length && !interestFilters.geography?.length && !interestFilters.industry?.length && !interestFilters.offering?.length) return true;
+
+            // Check for matches
+            const hasIndustry = !interestFilters.industry?.length || seller.solutions.some(s => s.industry.some(i => interestFilters.industry!.includes(i)));
+            const hasGeo = !interestFilters.geography?.length || seller.solutions.some(s => s.geography.some(g => interestFilters.geography!.includes(g)));
+            const hasVC = !interestFilters.valueChain?.length || seller.solutions.some(s => s.valueChain.some(v => interestFilters.valueChain!.includes(v)));
+            const hasOffering = !interestFilters.offering?.length || seller.solutions.some(s => interestFilters.offering!.includes(s.offering));
+
+            return hasIndustry && hasGeo && hasVC && hasOffering;
+        });
+    }, [allSellers, interestFilters, scopeFilter, effectiveUser]);
+
+    const filteredPosts = useMemo(() => {
+        const sellerIds = new Set(filteredSellers.map(s => s.id));
+        return allPosts.filter(p => sellerIds.has(p.sellerId));
+    }, [allPosts, filteredSellers]);
+
+    const personasForCurrentUser = useMemo(() => {
+        if (!currentUser) return [];
+        const base: Persona[] = [currentUser.persona];
+        if (currentUser.role === 'Admin') return ['Admin', ...base]; // Platform admin logic simplified
+        return base;
+    }, [currentUser]);
+
+    const currentUserSellerProfile = useMemo(() =>
+        effectiveUser?.persona === 'Seller' ? allSellers.find(s => s.companyName === effectiveUser.company) || null : null
+        , [effectiveUser, allSellers]);
+
+    const userAccessConfig = useMemo(() => {
+        return accessConfig[currentPersona] || {};
+    }, [accessConfig, currentPersona]);
+
+
+    const value: AppContextValue = {
+        state: {
+            view, viewHistory, scopeFilter, interestFilters, selectedSeller, isPostCreatorOpen, postCreatorData,
+            commentingPost, testimonialModalSeller, messagingSeller, meetingSeller, respondingToItem, impersonatingUser,
+            allUsers, allSellers, allPosts, allEnterprises, inboxItems, monetizationRules, platformSettings, currentPersona, currentUser, accessConfig,
+            setView, setScopeFilter, setInterestFilters, setSelectedSeller, setIsPostCreatorOpen, setPostCreatorData,
+            setCommentingPost, setTestimonialModalSeller, setMessagingSeller, setMeetingSeller, setRespondingToItem, setImpersonatingUser, setAccessConfig
+        },
+        effectiveUser,
+        personasForCurrentUser,
+        filteredSellers,
+        filteredPosts,
+        userAccessConfig,
+        currentUserSellerProfile,
+        handleLogin, handleSignUp, handleLogout, handleNavigate, handleBack, handleChangePersona, handleApplyFilters,
+        handleSelectSeller, handleLikePost, handleBookmarkPostToggle, handleSendConnectionRequest, handleConnectionRequestResponse,
+        handleUpdateUser, handleFollowSeller, handleLikeSellerToggle, handleOpenPostCreator, handleSavePost, handleAddComment,
+        handleAddTestimonial, handleSendResponse, handleCreateEnterprise, handleRequestToJoinEnterprise, handleAcceptInvite,
+        handleDeclineInvite, handleInviteToEnterprise, handleUpdateEnterpriseUser, handleRemoveFromEnterprise, handleApproveJoin,
+        handleDenyJoin, handleClaimMonthlyEarnings, handleAddMonetizationRule, handleUpdateMonetizationRule, handleDeleteMonetizationRule,
+        handleUpdatePlatformSettings,
+        handleAddPaymentMethod, handleRemovePaymentMethod, handleSetPreferredPaymentMethod, handlePayDues, handleSimulateBilling,
+        handleUpdateSellerTier, handleUpdateSolutions, handleActivateSolution, handleSetSolutionHold, handleCancelSolutionHold,
+        handleToggleInvestmentStatus, handleUpdateDueDiligence
+    };
+
+    return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+};

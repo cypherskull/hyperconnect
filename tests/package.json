@@ -1,0 +1,20 @@
+{
+  "name": "hyperconnect-tests",
+  "version": "1.0.0",
+  "description": "Playwright E2E + API test suite for HyperConnect",
+  "scripts": {
+    "test": "npx playwright test --config=playwright.config.ts",
+    "test:api": "npx playwright test --config=playwright.config.ts e2e/specs/09-api-contracts.spec.ts",
+    "test:auth": "npx playwright test --config=playwright.config.ts e2e/specs/01-auth.spec.ts",
+    "test:feed": "npx playwright test --config=playwright.config.ts e2e/specs/02-feed.spec.ts",
+    "test:seller": "npx playwright test --config=playwright.config.ts e2e/specs/04-seller-profile.spec.ts",
+    "test:headed": "npx playwright test --config=playwright.config.ts --headed",
+    "test:report": "npx playwright show-report playwright-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
