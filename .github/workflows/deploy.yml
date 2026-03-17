@@ -134,14 +134,63 @@ jobs:
           docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
           
-      - name: Deploy to App Runner
+      - name: Get Deployment Details
+        id: details
         run: |
-          # Fetch the service ARN using its name "hyperconnect-backend-production"
-          SERVICE_ARN=$(aws apprunner list-services --query "ServiceSummaryList[?ServiceName=='hyperconnect-backend-production'].ServiceArn" --output text)
-          if [ ! -z "$SERVICE_ARN" ] && [ "$SERVICE_ARN" != "None" ]; then
-            aws apprunner start-deployment --service-arn $SERVICE_ARN
-            echo "Waiting for backend deployment to complete..."
-            sleep 60
-          else
-            echo "App Runner service not found. Make sure Terraform has run successfully to create it."
+          INSTANCE_ID=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=hyperconnect-backend" --query "Reservations[].Instances[?State.Name=='running'].InstanceId" --output text)
+          RDS_ENDPOINT=$(aws rds describe-db-instances --db-instance-identifier hyperconnect-db --query "DBInstances[0].Endpoint.Address" --output text)
+          
+          echo "INSTANCE_ID=$INSTANCE_ID" >> $GITHUB_OUTPUT
+          echo "RDS_ENDPOINT=$RDS_ENDPOINT" >> $GITHUB_OUTPUT
+          
+      - name: Deploy to EC2 via SSM
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          INSTANCE_ID: ${{ steps.details.outputs.INSTANCE_ID }}
+          RDS_ENDPOINT: ${{ steps.details.outputs.RDS_ENDPOINT }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          S3_BUCKET_NAME: "hyperconnect-uploads-vtpk0ltu"
+        run: |
+          DATABASE_URL="postgresql://postgres:${DB_PASSWORD}@${RDS_ENDPOINT}:5432/hyperconnect?schema=public"
+          
+          # Construct the command to run on EC2
+          # We use heredoc to handle multi-line commands cleanly
+          SSM_COMMAND=$(cat <<EOF
+          aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}
+          docker pull ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest
+          docker stop hyperconnect-backend || true
+          docker rm hyperconnect-backend || true
+          docker run -d --name hyperconnect-backend \\
+            -p 3001:3001 \\
+            -e DATABASE_URL="${DATABASE_URL}" \\
+            -e JWT_SECRET="${JWT_SECRET}" \\
+            -e AWS_REGION="${AWS_REGION}" \\
+            -e S3_BUCKET_NAME="${S3_BUCKET_NAME}" \\
+            -e NODE_ENV="production" \\
+            ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest
+          EOF
+          )
+          
+          # Send the command via SSM
+          COMMAND_ID=$(aws ssm send-command \\
+            --instance-ids "${INSTANCE_ID}" \\
+            --document-name "AWS-RunShellScript" \\
+            --parameters "commands=[${SSM_COMMAND}]" \\
+            --query "Command.CommandId" \\
+            --output text)
+          
+          echo "SSM Command sent! ID: ${COMMAND_ID}"
+          
+          # Wait for command completion
+          aws ssm wait command-executed --command-id "${COMMAND_ID}" --instance-id "${INSTANCE_ID}"
+          
+          # Check command status
+          STATUS=$(aws ssm list-command-invocations --command-id "${COMMAND_ID}" --instance-id "${INSTANCE_ID}" --query "CommandInvocations[0].Status" --output text)
+          if [ "$STATUS" != "Success" ]; then
+            echo "Deployment failed with status: $STATUS"
+            aws ssm list-command-invocations --command-id "${COMMAND_ID}" --instance-id "${INSTANCE_ID}" --details --query "CommandInvocations[0].CommandPlugins[0].Output" --output text
+            exit 1
           fi
+          
+          echo "Backend deployment successful!"
