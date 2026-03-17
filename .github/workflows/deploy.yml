@@ -160,8 +160,8 @@ jobs:
             "commands": [
               "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}",
               "docker pull ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest",
-              "docker stop hyperconnect-backend || true",
-              "docker rm hyperconnect-backend || true",
+              "docker stop \$(docker ps -q --filter publish=3001) || true",
+              "docker rm -f hyperconnect-backend backend || true",
               "docker run -d --name hyperconnect-backend -p 3001:3001 -e DATABASE_URL=\"${DATABASE_URL}\" -e JWT_SECRET=\"${JWT_SECRET}\" -e AWS_REGION=\"${AWS_REGION}\" -e S3_BUCKET_NAME=\"${S3_BUCKET_NAME}\" -e NODE_ENV=\"production\" ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest"
             ]
           }
