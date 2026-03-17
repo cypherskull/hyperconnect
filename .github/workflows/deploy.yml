@@ -161,23 +161,23 @@ jobs:
           docker pull ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest
           docker stop hyperconnect-backend || true
           docker rm hyperconnect-backend || true
-          docker run -d --name hyperconnect-backend \\
-            -p 3001:3001 \\
-            -e DATABASE_URL="${DATABASE_URL}" \\
-            -e JWT_SECRET="${JWT_SECRET}" \\
-            -e AWS_REGION="${AWS_REGION}" \\
-            -e S3_BUCKET_NAME="${S3_BUCKET_NAME}" \\
-            -e NODE_ENV="production" \\
+          docker run -d --name hyperconnect-backend \
+            -p 3001:3001 \
+            -e DATABASE_URL="${DATABASE_URL}" \
+            -e JWT_SECRET="${JWT_SECRET}" \
+            -e AWS_REGION="${AWS_REGION}" \
+            -e S3_BUCKET_NAME="${S3_BUCKET_NAME}" \
+            -e NODE_ENV="production" \
             ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest
           EOF
           )
           
           # Send the command via SSM
-          COMMAND_ID=$(aws ssm send-command \\
-            --instance-ids "${INSTANCE_ID}" \\
-            --document-name "AWS-RunShellScript" \\
-            --parameters "commands=[${SSM_COMMAND}]" \\
-            --query "Command.CommandId" \\
+          COMMAND_ID=$(aws ssm send-command \
+            --instance-ids "${INSTANCE_ID}" \
+            --document-name "AWS-RunShellScript" \
+            --parameters "commands=[${SSM_COMMAND}]" \
+            --query "Command.CommandId" \
             --output text)
           
           echo "SSM Command sent! ID: ${COMMAND_ID}"
