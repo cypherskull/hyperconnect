@@ -8,7 +8,7 @@ import * as db from './api'; // Keep for mock fallbacks
 import type { User, Persona, Post, Seller, Comment, Testimonial, Solution, Enterprise, MonetizationRule, AccessConfig, PaymentMethod, InboxItem, MeetingDetails, SharedContent, DueDiligenceData, PlatformSettings, InboxItemCategory } from '../types';
 
 const SIMULATED_DELAY = 200; // ms
-const API_URL = 'http://localhost:3001/api';
+const API_URL = '/api';
 
 // --- LocalStorage Persistence for Mocks --- //
 // This ensures mock data persists even when the backend/database is down

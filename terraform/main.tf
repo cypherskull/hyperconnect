@@ -44,7 +44,7 @@ output "s3_bucket_name" {
   value       = aws_s3_bucket.uploads.bucket
 }
 
-output "app_runner_url" {
-  description = "App Runner service URL"
-  value       = aws_apprunner_service.backend.service_url
+output "backend_url" {
+  description = "Backend API URL"
+  value       = "http://${aws_eip.backend_eip.public_ip}:3001"
 }

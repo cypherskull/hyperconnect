@@ -74,11 +74,11 @@ resource "aws_security_group" "rds" {
   vpc_id      = aws_vpc.main.id
 
   ingress {
-    description     = "PostgreSQL from App Runner"
+    description     = "PostgreSQL from EC2"
     from_port       = 5432
     to_port         = 5432
     protocol        = "tcp"
-    security_groups = [aws_security_group.app_runner.id]
+    security_groups = [aws_security_group.ec2_sg.id]
   }
 
   egress {

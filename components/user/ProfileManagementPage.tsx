@@ -279,17 +279,27 @@ export const ProfileManagementPage: React.FC<ProfileManagementPageProps> = (prop
                 <ReferralPanel user={user} onClaimMonthlyEarnings={() => onClaimMonthlyEarnings(user.id)} allUsers={allUsers} />
             </SectionCard>
 
-            {user.persona === 'Seller' && userSellerProfile && (
+            {user.persona === 'Seller' && (
                 <SectionCard title="Company Management">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <button onClick={() => onSelectSeller(userSellerProfile, { tab: 'manage' })} className="p-4 flex items-center space-x-3 bg-brand-card-light rounded-lg border border-brand-border hover:border-brand-primary hover:bg-brand-primary/10">
+                        <button
+                            onClick={() => userSellerProfile
+                                ? onSelectSeller(userSellerProfile, { tab: 'manage' })
+                                : showToast('info', 'Profile Loading', 'Your seller profile is being set up. Please refresh the page in a moment.')
+                            }
+                            className="p-4 flex items-center space-x-3 bg-brand-card-light rounded-lg border border-brand-border hover:border-brand-primary hover:bg-brand-primary/10">
                             <CubeIcon className="w-8 h-8 text-brand-primary" />
                             <div>
                                 <p className="font-bold text-left">Manage Content</p>
                                 <p className="text-xs text-gray-500 text-left">Edit solutions, testimonials, etc.</p>
                             </div>
                         </button>
-                        <button onClick={() => onSelectSeller(userSellerProfile, { tab: 'analytics' })} className="p-4 flex items-center space-x-3 bg-brand-card-light rounded-lg border border-brand-border hover:border-brand-primary hover:bg-brand-primary/10">
+                        <button
+                            onClick={() => userSellerProfile
+                                ? onSelectSeller(userSellerProfile, { tab: 'analytics' })
+                                : showToast('info', 'Profile Loading', 'Your seller profile is being set up. Please refresh the page in a moment.')
+                            }
+                            className="p-4 flex items-center space-x-3 bg-brand-card-light rounded-lg border border-brand-border hover:border-brand-primary hover:bg-brand-primary/10">
                             <ChartBarIcon className="w-8 h-8 text-brand-primary" />
                             <div>
                                 <p className="font-bold text-left">View Analytics</p>

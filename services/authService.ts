@@ -3,7 +3,7 @@ import type { User, Enterprise } from '../types';
 import * as api from './apiService'; 
 import { mockUsers } from './api';
 
-const API_URL = 'http://localhost:3001/api/auth';
+const API_URL = '/api/auth';
 
 // --- Token Management --- //
 
@@ -134,14 +134,17 @@ export const logout = async (): Promise<void> => {
 export const signUp = async (newUserData: Omit<User, 'id' | 'referralCode'> & { referralCode?: string }): Promise<{ token: string; user: User }> => {
     console.log(`Signing up user ${newUserData.name}`);
     try {
-        // Backend key mapping: 'email' (personalEmail in DB), 'password', 'name', 'persona', 'designation', 'company'
+        // Send all signup fields to the backend so they are persisted
         const payload = {
             email: newUserData.personalEmail || newUserData.businessEmail,
             password: newUserData.password,
             name: newUserData.name,
             persona: newUserData.persona,
             designation: newUserData.designation,
-            company: newUserData.company
+            company: newUserData.company,
+            businessEmail: newUserData.businessEmail || null,
+            phone: newUserData.phone || null,
+            interests: newUserData.interests || null,
         };
 
         const response = await fetch(`${API_URL}/register`, {
@@ -160,12 +163,14 @@ export const signUp = async (newUserData: Omit<User, 'id' | 'referralCode'> & { 
 
         const mappedUser: User = {
             ...user,
-            personalEmail: user.email,
+            personalEmail: user.personalEmail || user.email,
             isPersonalEmailVerified: false,
-            businessEmail: '',
+            businessEmail: user.businessEmail || newUserData.businessEmail || '',
+            phone: user.phone || newUserData.phone,
             isBusinessEmailVerified: false,
             wantsEmailNotifications: true,
-            referralCode: user.referralCode || 'PENDING'
+            referralCode: user.referralCode || 'PENDING',
+            interests: user.interests || newUserData.interests,
         };
 
         setToken(token);
@@ -173,21 +178,15 @@ export const signUp = async (newUserData: Omit<User, 'id' | 'referralCode'> & { 
     } catch (error) {
         console.error("Signup failed:", error);
 
-        // Fallback to mock behavior for testing
+        // Fallback to mock behavior for testing — spread newUserData to preserve all fields
         const mockUser: User = {
             id: `user-${Date.now()}`,
-            name: newUserData.name,
-            personalEmail: newUserData.personalEmail || '',
-            businessEmail: newUserData.businessEmail || '',
-            persona: newUserData.persona,
-            designation: newUserData.designation,
-            company: newUserData.company,
             role: 'Member',
             isPersonalEmailVerified: true,
             isBusinessEmailVerified: true,
             wantsEmailNotifications: true,
             referralCode: generateReferralCode(newUserData.name),
-            ...newUserData
+            ...newUserData,
         };
         const mockToken = `mock-jwt-for-user-${mockUser.id}`;
         setToken(mockToken);

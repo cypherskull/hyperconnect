@@ -5,7 +5,7 @@ resource "aws_db_instance" "main" {
 
   # Engine
   engine               = "postgres"
-  engine_version       = "15.4"
+  engine_version       = "15"
   instance_class       = var.db_instance_class
   allocated_storage    = var.db_allocated_storage
   max_allocated_storage = 30 # Allow autoscaling up to 30GB
@@ -26,13 +26,13 @@ resource "aws_db_instance" "main" {
   storage_encrypted     = true
 
   # Backup
-  backup_retention_period = 7
+  backup_retention_period = 0
   backup_window          = "03:00-04:00"
   maintenance_window     = "Mon:04:00-Mon:05:00"
 
   # Performance Insights (free for db.t3.micro)
-  performance_insights_enabled = true
-  performance_insights_retention_period = 7
+  performance_insights_enabled = false
+  # performance_insights_retention_period = 7
 
   # Other settings
   skip_final_snapshot = true

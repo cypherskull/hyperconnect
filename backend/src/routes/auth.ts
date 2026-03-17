@@ -30,7 +30,7 @@ router.post(
                 return;
             }
 
-            const { email, password, name, persona, designation, company } = req.body;
+            const { email, password, name, persona, designation, company, businessEmail, phone, interests } = req.body;
 
             // Check if user exists
             const existingUser = await prisma.user.findUnique({
@@ -54,10 +54,35 @@ router.post(
                     persona,
                     designation: designation || '',
                     company: company || '',
+                    businessEmail: businessEmail || null,
+                    phone: phone || null,
                     referralCode: generateReferralCode(name),
                     avatarUrl: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random&size=150`,
                 },
             });
+
+            // Persist interests if provided
+            if (interests) {
+                await prisma.userInterests.create({
+                    data: {
+                        userId: user.id,
+                        industries: interests.industry || [],
+                        geographies: interests.geography || [],
+                        valueChains: interests.valueChain || [],
+                        offerings: interests.offering || [],
+                    },
+                });
+            }
+
+            // Auto-create a Seller record so the seller can immediately manage content
+            if (persona === 'Seller' && company) {
+                await prisma.seller.create({
+                    data: {
+                        companyName: company,
+                        about: '',
+                    },
+                });
+            }
 
             // Generate token
             const token = jwt.sign(
@@ -72,8 +97,13 @@ router.post(
                     id: user.id,
                     name: user.name,
                     email: user.personalEmail,
+                    personalEmail: user.personalEmail,
+                    businessEmail: user.businessEmail,
+                    phone: user.phone,
                     persona: user.persona,
                     avatarUrl: user.avatarUrl,
+                    referralCode: user.referralCode,
+                    interests: interests || null,
                 },
             });
         } catch (error) {
